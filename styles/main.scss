@@ -165,29 +165,39 @@ $maincolor: #FF7A49;
   box-shadow: 0 0 0 0 #FFFFFF;
 }
 
-.plots-sliders__svg svg.disable{
+.plots-sliders__svg.disable a svg{
   path{
-    fill: #eee;
+    fill: #A4B8C1;
   }
   circle:first-child {
-    stroke:#eee;
+    stroke:#A4B8C1;
     fill:#FFFFFF;}
-  circle{fill:#eee}
+  circle{fill:#A4B8C1}
 }
 
-.girl span.disable,
-.boy span.disable{
-  text-decoration: none;
+.girl.disable:last-child,
+.boy.disable:last-child {
+  border-bottom: 1px solid #A4B8C1;
 }
 
-.girl:hover{
+.plots-sliders__tab:hover .girl a span{
   color: #FF946D;
 }
-.boy:hover{
+.plots-sliders__tab:hover .boy a span{
   color: #5CA2FF;
 }
 
-.girl:hover svg{
+.plots-sliders__tab:hover div.girl:last-child{
+  border-bottom: 1px solid #FF946D;
+}
+
+.plots-sliders__tab:hover div.boy:last-child{
+  border-bottom: 1px solid #5CA2FF;
+}
+
+
+
+.plots-sliders__tab:hover .girl a svg{
   path{
 
     fill: #FF946D;
@@ -201,7 +211,7 @@ $maincolor: #FF7A49;
   circle{fill:#FF946D}
 }
 
-.boy:hover svg{
+.plots-sliders__tab:hover .boy a svg{
   path{
 //#5CA2FF
     fill: #5CA2FF;
@@ -696,6 +706,7 @@ body {
   &__tab-container {
     display: flex;
     justify-content: flex-end;
+    align-items: flex-start;
     flex: auto 1 0;
   }
 
@@ -704,6 +715,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
   }
 
   &__tab span {
@@ -755,15 +767,24 @@ body {
   }
 }
 
-.boy {
+.boy  a{
   color: #0091FF;
-  text-decoration: underline;
 }
 
-.girl {
+.girl a{
   color: #FF7A49;
-  text-decoration: underline;
 }
+
+div.girl:last-child{
+  border-bottom: 1px solid #FF7A49;
+}
+
+div.boy:last-child{
+  border-bottom: 1px solid #0091FF;
+}
+
+
+
 
 .plotsm-slider {
 
@@ -800,6 +821,11 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+.tab-girl{
+  display: none;
+}
+
 
 
 /* Сюжеты_Фото Конец*/
