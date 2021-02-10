@@ -219,6 +219,11 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 2px solid #FF7A49;
 }
 
+.plotsm-slider__slide.swiper-slide:hover {
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #0091FF;
+}
+
 /*Состояния кнопок_конец*/
 img {
   pointer-events: none;
@@ -570,7 +575,6 @@ body {
 }
 .plots-container__row {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
 }
 .plots-container__row:last-child {
@@ -578,15 +582,23 @@ body {
 }
 .plots-container .small-photo {
   flex: 23% 0 1;
+  min-width: 277.5px;
 }
 .plots-container .big-photo {
   flex: 48% 0 1;
+  max-width: 575px;
+  min-width: 575px;
 }
 .plots-container__photo {
   position: relative;
+  margin-right: 20px;
+}
+.plots-container__photo:last-child {
+  margin-right: 0px;
 }
 .plots-container__photo img {
   border-radius: 5px;
+  width: 100%;
 }
 .plots-container__photo a {
   display: inline-block;
@@ -724,6 +736,7 @@ div.boy:last-child {
   width: 200px;
   height: 200px;
   margin: 0 0 16px 0;
+  cursor: pointer;
 }
 
 .plots-sliders__slider-mini {
