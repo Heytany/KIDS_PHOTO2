@@ -156,20 +156,26 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 0 #FFFFFF;
 }
 
-.plots-sliders__svg.disable a svg path {
+.plots-sliders__tab.disable .plots-sliders__svg a svg path {
   fill: #A4B8C1;
 }
-.plots-sliders__svg.disable a svg circle:first-child {
+.plots-sliders__tab.disable .plots-sliders__svg a svg circle:first-child {
   stroke: #A4B8C1;
   fill: #FFFFFF;
 }
-.plots-sliders__svg.disable a svg circle {
+.plots-sliders__tab.disable .plots-sliders__svg a svg circle {
   fill: #A4B8C1;
 }
 
-.girl.disable:last-child,
-.boy.disable:last-child {
+.plots-sliders__tab.disable .girl .label-girl,
+.plots-sliders__tab.disable .boy .label-boy {
+  display: inline-block;
   border-bottom: 1px solid #A4B8C1;
+}
+
+.plots-sliders__tab.disable .girl a span,
+.plots-sliders__tab.disable .boy a span {
+  color: #A4B8C1;
 }
 
 .plots-sliders__tab:hover .girl a span {
@@ -180,11 +186,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #5CA2FF;
 }
 
-.plots-sliders__tab:hover div.girl:last-child {
+.plots-sliders__tab:hover div.girl .label-girl {
+  display: inline-block;
   border-bottom: 1px solid #FF946D;
 }
 
-.plots-sliders__tab:hover div.boy:last-child {
+.plots-sliders__tab:hover div.boy .label-boy {
+  display: inline-block;
   border-bottom: 1px solid #5CA2FF;
 }
 
@@ -340,6 +348,8 @@ body {
 
 .image-slider__image {
   text-align: center;
+  width: 333px;
+  height: 501px;
 }
 
 .image-slider__image img {
@@ -712,11 +722,13 @@ body {
   color: #FF7A49;
 }
 
-div.girl:last-child {
+.plots-sliders__tab div.girl .label-girl {
+  display: inline-block;
   border-bottom: 1px solid #FF7A49;
 }
 
-div.boy:last-child {
+.plots-sliders__tab div.boy .label-boy {
+  display: inline-block;
   border-bottom: 1px solid #0091FF;
 }
 
