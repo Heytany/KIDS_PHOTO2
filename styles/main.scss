@@ -221,7 +221,7 @@ $maincolor: #FF7A49;
 
 .plots-sliders__tab:hover .boy a svg{
   path{
-//#5CA2FF
+    //#5CA2FF
     fill: #5CA2FF;
   }
 
@@ -241,7 +241,7 @@ $maincolor: #FF7A49;
 
 .plotsm-slider__slide.swiper-slide:hover{
   border-radius: 5px;
- box-shadow: 0 0 0 1px #0091FF;
+  box-shadow: 0 0 0 1px #0091FF;
 }
 
 /*Состояния кнопок_конец*/
@@ -762,10 +762,10 @@ body {
     text-transform: uppercase;
   }
 
-/*  &__slider-mini {
-    width: 415px;
-    height: 415px;
-  }*/
+  /*  &__slider-mini {
+      width: 415px;
+      height: 415px;
+    }*/
 
 
 }
@@ -852,6 +852,216 @@ body {
   display: none;
 }
 
-
-
 /* Сюжеты_Фото Конец*/
+
+/* Заказать_Фото*/
+.order-info
+{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  &__buttons{
+    display: flex;
+  }
+
+  &__buttons button{
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid #FF7A49;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+
+
+  &__buttons button:last-child{
+    margin-right: 0px;
+  }
+
+  &__buttons button div span{
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FF7A49;
+  }
+
+  &__buttons div:first-child{
+    padding: 8.3px 10px 8.3px 30px;
+  }
+
+  &__buttons div:last-child{
+    padding: 8.3px 30px 5px 10px;
+  }
+
+  &__rectangle{
+    background: #FF7A49;
+    border-radius: 5px;
+    display: flex;
+    min-width: 186px;
+    min-height: 39px;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__cost{
+    flex: 50% 0 1;
+    text-align: right;
+  }
+
+  &__cost span{
+    font-size: 20px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+  }
+
+  &__r-icon{
+    display: flex;
+    flex: 10% 0 1;
+    align-items: start;
+    margin-top: 1px;
+  }
+  &__basket{
+    display: flex;
+    flex: 30% 0 1;
+    align-items: center;
+  }
+  }
+
+
+.main-order{
+  &__inner-back{
+    background: rgba(0, 145, 255, 0.1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    //height: 790px;
+  }
+  &__startend-column{
+    display: flex;
+    flex-direction: column;
+    flex: 9% 0 1;
+
+  }
+  &__item-column{
+    display: flex;
+    flex-direction: column;
+    flex: 25% 0 1;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 5px;
+  }
+
+  &__item-column,
+  &__startend-column{
+    margin: 10px 0;
+  }
+
+  &__image-container{
+    margin: 10px 10px 30px 10px;
+    max-height: 331px;
+    max-width: 220px;
+  }
+
+  &__image-container img{
+    border-radius: 5px;
+  }
+
+  &__blank-space{
+    margin: 10px 10px 30px 10px;
+    height: 331px;
+  }
+
+  &__input-counter input{
+    display: block;
+    height: 37px;
+    width: 37px;
+    border: 1px solid #CCD8DE;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+  &__photo-type{
+      height: 37px;
+  }
+
+  &__type-label{
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #A4B8C1;
+  }
+
+  &__type-label-size{
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    color: #30454F;
+  }
+
+  &__photo-type{
+    position: relative;
+  }
+  &__type-label-price{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+  &__type-label-price span{
+    font-size: 18px;
+    line-height: 21px;
+    color: #FF7A49;
+    text-align: center;
+  }
+
+  &__photo-couple &__input-counter{
+    margin: 8px 0;
+  }
+
+  &__photo-couple{
+    margin-bottom: 14px;
+  }
+  &__startend-column &__photo-couple,
+  &__item-column &__photo-couple,
+  {
+    margin-bottom: 14px;
+  }
+
+  &__startend-column &__photo-couple
+  {
+
+  }
+  &__item-column &__photo-couple:after
+  {
+    }
+
+  &__startend-column &__photo-couple:last-child,
+  &__item-column &__photo-couple:last-child,
+  {
+    margin-bottom: 0px;
+  }
+
+  &__pick-size{
+    margin: 22px 0px 25px 0;
+    width: 195px;
+    height: 39px;
+    background: #FFFFFF;
+    border: 1px solid #FF7A49;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+  &__pick-size span {
+    font-size: 16px;
+    line-height: 19px;
+    color: #FF7A49;
+  }
+
+
+}
+
+/* Заказать_Фото Конец*/
