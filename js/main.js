@@ -49,10 +49,6 @@ $(function () {
 		// console.log(otherTabName)
 		let otherTabsVisibleTrigger = true;
 		otherTabName.forEach(function(otherTab) {
-			console.log(otherTab)
-			// console.log($('.tab-'+otherTab).is(':visible'))
-			console.log()
-			
 			if($('.tab-'+otherTab).is(':visible')){
 				otherTabsVisibleTrigger = false;
 			}
