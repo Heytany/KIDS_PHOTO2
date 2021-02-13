@@ -107,6 +107,11 @@ h1, h2, h3, h4, h5, h6 {
   background: #FF946D;
 }
 
+.secondary-button:hover svg path,
+.secondary-button:active svg path {
+  stroke: #FFFFFF;
+}
+
 .secondary-button:hover .secondary-button__text,
 .secondary-button:active .secondary-button__text {
   color: #FFFFFF;
@@ -791,7 +796,7 @@ body {
   color: #FF7A49;
 }
 .order-info__buttons div:first-child {
-  padding: 8.3px 10px 8.3px 30px;
+  padding: 10.3px 10px 8.3px 30px;
 }
 .order-info__buttons div:last-child {
   padding: 8.3px 30px 5px 10px;
@@ -853,10 +858,11 @@ body {
 }
 .main-order__image-container {
   margin: 10px 10px 30px 10px;
-  max-height: 331px;
-  max-width: 220px;
+  height: 331px;
+  width: 220px;
 }
 .main-order__image-container img {
+  width: 100%;
   border-radius: 5px;
 }
 .main-order__blank-space {
@@ -870,6 +876,11 @@ body {
   border: 1px solid #CCD8DE;
   box-sizing: border-box;
   border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #30454F;
 }
 .main-order__photo-type {
   height: 37px;
@@ -918,10 +929,9 @@ body {
   display: inline-block;
   vertical-align: middle;
   width: 500%;
-  height: 2px;
+  height: 1px;
+  top: 106%;
   background: #A4B8C1;
-  border: solid #FFF;
-  border-width: 0.5em 0;
   margin-left: -200%;
   opacity: 0.4;
 }
@@ -987,6 +997,8 @@ body {
 }
 .main-order-options__params {
   flex: 49% 0 1;
+  display: flex;
+  flex-direction: column;
 }
 .main-order-options__prow {
   display: flex;
@@ -1046,42 +1058,120 @@ body {
   text-transform: uppercase;
   color: #FF7A49;
 }
+.main-order-options__button-container {
+  margin-top: auto;
+}
 
 .main-order-accept {
   display: flex;
   justify-content: space-between;
-  /*
-    &__check-box label{
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 21px;
-      text-transform: uppercase;
-      color: #30454F;
-    }*/
 }
 .main-order-accept__send, .main-order-accept__comment {
-  flex: 48% 0 1;
+  flex: 49% 0 1;
 }
-.main-order-accept #checkbox {
+.main-order-accept .checkbox1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+}
+.main-order-accept .checkbox1 span {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #30454F;
+}
+.main-order-accept__decription {
+  margin-bottom: 15px;
+}
+.main-order-accept__decription span, .main-order-accept__decription-last span {
+  font-size: 14px;
+  line-height: 16px;
+  color: #A4B8C1;
+}
+.main-order-accept__decription-last {
+  margin-bottom: 40px;
+}
+.main-order-accept__decription-last span:nth-child(1) {
+  text-transform: uppercase;
+}
+.main-order-accept__decription-last span:nth-child(2) {
+  display: inline-block;
+  padding: 0px 10px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #30454F;
+}
+.main-order-accept__decription-last span:nth-child(3) {
+  font-size: 18px;
+  line-height: 21px;
+  color: #FF7A49;
+}
+.main-order-accept__order-detail button {
+  width: 218px;
+  height: 41px;
+  background: #FF7A49;
+  border-radius: 5px;
+}
+.main-order-accept__order-detail button span {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.main-order-accept__order-detail {
+  display: flex;
+  align-items: center;
+}
+.main-order-accept__order-cost {
+  padding-left: 25px;
+}
+.main-order-accept__order-cost span {
+  font-size: 20px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #FF7A49;
+  font-weight: 600;
+}
+
+.checkbox1 input {
   display: none;
 }
-.main-order-accept #checkbox + label {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background: #ccc;
-  border: 1px solid #555;
-  text-align: center;
+
+.checkbox1 svg {
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  display: none;
 }
-.main-order-accept #checkbox + label:before {
-  content: "✔";
-  font-size: 20px;
+
+.checkbox1 {
+  padding: 0 0 0 45px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
-.main-order-accept #checkbox:checked + label {
-  border: 1px solid green;
+
+.checkbox1:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  border: 1px solid #A4B8C1;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
-.main-order-accept #checkbox:checked + label:before {
-  color: green;
+
+.checkbox1.activebox:before {
+  background-color: #DE5929;
+}
+
+.checkbox1.activebox svg {
+  display: inline-block;
 }
 
 /* Заказать_Фото Конец*/

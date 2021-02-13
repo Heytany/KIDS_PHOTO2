@@ -112,7 +112,13 @@ $maincolor: #FF7A49;
 
 .secondary-button:hover {
   background: #FF946D;
+}
 
+.secondary-button:hover svg,
+.secondary-button:active svg,{
+  path{
+  stroke: #FFFFFF;
+  }
 }
 
 .secondary-button:hover .secondary-button__text,
@@ -886,7 +892,7 @@ body {
   }
 
   &__buttons div:first-child{
-    padding: 8.3px 10px 8.3px 30px;
+    padding: 10.3px 10px 8.3px 30px;
   }
 
   &__buttons div:last-child{
@@ -961,11 +967,12 @@ body {
 
   &__image-container{
     margin: 10px 10px 30px 10px;
-    max-height: 331px;
-    max-width: 220px;
+    height: 331px;
+    width: 220px;
   }
 
   &__image-container img{
+    width: 100%;
     border-radius: 5px;
   }
 
@@ -981,6 +988,14 @@ body {
     border: 1px solid #CCD8DE;
     box-sizing: border-box;
     border-radius: 5px;
+
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #30454F;
+
   }
 
   &__photo-type{
@@ -1044,10 +1059,9 @@ body {
     display:inline-block;
     vertical-align:middle;
     width:500%;
-    height:2px;
+    height:1px;
+    top: 106%;
     background:#A4B8C1;
-    border:solid #FFF;
-    border-width:0.5em 0;
     margin-left:-200%;
     opacity: 0.4;
 
@@ -1130,6 +1144,7 @@ body {
   &__image{
     flex: 49% 0 1;
     height: 280px;
+
   }
   &__image img{
     width: 100%;
@@ -1138,6 +1153,8 @@ body {
 
   &__params{
     flex: 49% 0 1;
+    display: flex;
+    flex-direction: column;
   }
   &__prow{
     display: flex;
@@ -1207,6 +1224,9 @@ body {
     text-transform: uppercase;
     color: #FF7A49;
   }
+  &__button-container{
+    margin-top: auto;
+  }
 
 
 }
@@ -1217,41 +1237,128 @@ body {
 
   &__send,
   &__comment{
-    flex: 48% 0 1;
+    flex: 49% 0 1;
   }
 
-/*
-  &__check-box label{
+  .checkbox1{
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+  }
+  .checkbox1  span{
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
     text-transform: uppercase;
     color: #30454F;
-  }*/
+  }
+  &__decription{
+    margin-bottom: 15px;
+  }
+  &__decription span,
+  &__decription-last span{
+    font-size: 14px;
+    line-height: 16px;
+    color: #A4B8C1;
+  }
 
-  #checkbox{
-    display: none;
+  &__decription-last{
+    margin-bottom: 40px;
   }
-  #checkbox + label{
-    display: block;
-    width: 30px;
-    height: 30px;
-    background: #ccc;
-    border: 1px solid #555;
-    text-align: center;
+
+  &__decription-last span:nth-child(1){
+    text-transform: uppercase;
   }
-  #checkbox + label:before{
-    content: '✔';
+
+  &__decription-last span:nth-child(2){
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #30454F;
+  }
+
+  &__decription-last span:nth-child(3){
+    font-size: 18px;
+    line-height: 21px;
+    color: #FF7A49;
+  }
+
+  &__order-detail button{
+    width: 218px;
+    height: 41px;
+    background: #FF7A49;
+    border-radius: 5px;
+  }
+  &__order-detail button span{
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  }
+
+  &__order-detail{
+    display: flex;
+    align-items: center;
+  }
+  &__order-cost{
+    padding-left: 25px;
+  }
+  &__order-cost span{
+
     font-size: 20px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FF7A49;
+    font-weight: 600;
   }
-  #checkbox:checked + label{
-    border: 1px solid green;
-  }
-  #checkbox:checked + label:before{
-    color: green;
-  }
+
+
+
 
 }
+
+.checkbox1 input{
+  display: none;
+}
+.checkbox1 svg{
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  display: none;
+}
+
+.checkbox1{
+  padding: 0 0 0 45px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.checkbox1:before{
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  border: 1px solid #A4B8C1;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+
+
+.checkbox1.activebox:before{
+  background-color: #DE5929;
+}
+
+.checkbox1.activebox svg{
+  display: inline-block;
+}
+
 
 
 
