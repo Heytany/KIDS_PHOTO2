@@ -941,13 +941,13 @@ body {
   &__startend-column{
     display: flex;
     flex-direction: column;
-    flex: 9% 0 1;
+    flex: 6% 0 1;
 
   }
   &__item-column{
     display: flex;
     flex-direction: column;
-    flex: 25% 0 1;
+    flex: 15% 0 1;
     align-items: center;
     background: #FFFFFF;
     border-radius: 5px;
@@ -1024,6 +1024,7 @@ body {
 
   &__photo-couple{
     margin-bottom: 14px;
+    position: relative;
   }
   &__startend-column &__photo-couple,
   &__item-column &__photo-couple,
@@ -1035,15 +1036,50 @@ body {
   {
 
   }
-  &__item-column &__photo-couple:after
+  &__item-column &__photo-couple::after
   {
+    position: absolute;
+    content:'';
+    display:inline-block;
+    vertical-align:middle;
+    width:500%;
+    height:2px;
+    background:#A4B8C1;
+    border:solid #FFF;
+    border-width:0.5em 0;
+    margin-left:-200%;
+    opacity: 0.4;
+
     }
+
+  &__startend-column &__photo-couple::after
+  {
+    position: absolute;
+    content:'';
+    display:inline-block;
+    vertical-align:middle;
+    width:139%;
+    height:2px;
+    top: 106%;
+    background:#FFFFFF;
+    margin-left: -16%;
+
+  }
 
   &__startend-column &__photo-couple:last-child,
   &__item-column &__photo-couple:last-child,
   {
     margin-bottom: 0px;
   }
+
+  &__item-column &__photo-couple:last-child
+  {
+    background: #DE5929;
+    opacity: 1;
+  }
+
+
+
 
   &__pick-size{
     margin: 22px 0px 25px 0;
