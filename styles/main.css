@@ -1016,6 +1016,11 @@ body {
   border: 1px solid #CCD8DE;
   box-sizing: border-box;
   border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #30454F;
 }
 .main-order-options__pname {
   flex: 24% 0 1;
