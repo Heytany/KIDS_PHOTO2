@@ -833,6 +833,7 @@ body {
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
 }
 .main-order__startend-column {
   display: flex;
@@ -924,6 +925,9 @@ body {
   margin-left: -200%;
   opacity: 0.4;
 }
+.main-order__startend-column .main-order__photo-couple:last-child::after, .main-order__item-column .main-order__photo-couple:nth-child(4)::after {
+  content: none;
+}
 .main-order__startend-column .main-order__photo-couple::after {
   position: absolute;
   content: "";
@@ -955,6 +959,129 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: #FF7A49;
+}
+
+.main-order-options {
+  margin-bottom: 30px;
+  background: rgba(0, 145, 255, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+}
+.main-order-options__background {
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 20px;
+}
+.main-order-options__background2 {
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+}
+.main-order-options__image {
+  flex: 49% 0 1;
+  height: 280px;
+}
+.main-order-options__image img {
+  width: 100%;
+  border-radius: 5px;
+}
+.main-order-options__params {
+  flex: 49% 0 1;
+}
+.main-order-options__prow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.main-order-options__prow:last-child {
+  margin-bottom: 0px;
+}
+.main-order-options__prow div input {
+  display: block;
+  height: 37px;
+  width: 37px;
+  border: 1px solid #CCD8DE;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.main-order-options__pname {
+  flex: 24% 0 1;
+}
+.main-order-options__psize {
+  flex: 14% 0 1;
+  margin-left: -20%;
+}
+.main-order-options__pcost {
+  flex: 14% 0 1;
+}
+.main-order-options__pname span {
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #A4B8C1;
+}
+.main-order-options__psize span {
+  font-size: 18px;
+  line-height: 21px;
+  color: #30454F;
+}
+.main-order-options__pcost span {
+  font-size: 18px;
+  line-height: 21px;
+  color: #FF7A49;
+}
+.main-order-options__pick-size {
+  width: 195px;
+  height: 39px;
+  background: #FFFFFF;
+  border: 1px solid #FF7A49;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.main-order-options__pick-size span {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FF7A49;
+}
+
+.main-order-accept {
+  display: flex;
+  justify-content: space-between;
+  /*
+    &__check-box label{
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      text-transform: uppercase;
+      color: #30454F;
+    }*/
+}
+.main-order-accept__send, .main-order-accept__comment {
+  flex: 48% 0 1;
+}
+.main-order-accept #checkbox {
+  display: none;
+}
+.main-order-accept #checkbox + label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #ccc;
+  border: 1px solid #555;
+  text-align: center;
+}
+.main-order-accept #checkbox + label:before {
+  content: "✔";
+  font-size: 20px;
+}
+.main-order-accept #checkbox:checked + label {
+  border: 1px solid green;
+}
+.main-order-accept #checkbox:checked + label:before {
+  color: green;
 }
 
 /* Заказать_Фото Конец*/
