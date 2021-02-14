@@ -514,8 +514,11 @@ body {
   //overflow: hidden;
   border: 1px solid #A4B8C1;
   box-sizing: border-box;
-  border-radius: 5px
-
+  border-radius: 5px;
+  padding: 12px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 16px;
 
 }
 
@@ -523,13 +526,7 @@ body {
   resize: none;
 }
 
-.contacts-container__input-email input,
-.contacts-container__input-message textarea {
-  padding: 12px;
-  width: 100%;
-  font-size: 14px;
-  line-height: 16px;
-}
+
 
 .contacts-container__input-message textarea {
   min-height: 87px;
@@ -1321,11 +1318,87 @@ body {
     font-weight: 600;
   }
 
+  &__link  span{
+    font-size: 14px;
+    line-height: 16px;
+    color: #0091FF
+  }
 
+  &__link{
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  &__spoiler-label{
+    margin-bottom: 12px;
+  }
+  &__spoiler-label span{
+    font-size: 14px;
+    line-height: 16px;
+    color: #A4B8C1;
+  }
 
+  &__spoiler-input textarea{
+      border: 1px solid #A4B8C1;
+      box-sizing: border-box;
+      border-radius: 5px;
+      resize: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 14px;
+      line-height: 16px;
+      min-height: 84px;
+  }
+
+  &__input-counter{
+    margin-bottom: 15px;
+  }
+
+  &__input-counter p{
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #A4B8C1;
+  }
+  &__spoiler-footer{
+    display: flex;
+  }
+  &__spoiler-footer button{
+    background: #FFFFFF;
+    border: 1px solid #FF7A49;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 120px;
+    height: 39px;
+  }
+
+  &__spoiler-footer button span{
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FF7A49;
+  }
+  &__spoiler-footer p{
+  font-size: 14px;
+  line-height: 16px;
+  color: #A4B8C1;
+  }
+  &__spoiler-footer-meta{
+    margin: 0 10px 0px 15px;
+  }
+
+  &__spoiler{
+    display: none;
+  }
+
+  &__spoiler.active-spoiler{
+    display: block;
+  }
 
 }
 
+//Custom checkbox
 .checkbox1 input{
   display: none;
 }
@@ -1333,16 +1406,15 @@ body {
   position: absolute;
   left: 3px;
   top: 6px;
-  display: none;
+  opacity: 0;
+  transition: all 0.6s ease 0s;
 }
-
 .checkbox1{
   padding: 0 0 0 45px;
   position: relative;
   cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
 
+}
 .checkbox1:before{
   position: absolute;
   left: 0;
@@ -1354,16 +1426,13 @@ body {
   border: 1px solid #A4B8C1;
   box-sizing: border-box;
   border-radius: 5px;
+  transition: all 0.6s ease 0s;
 }
-
-
-
 .checkbox1.activebox:before{
   background-color: #DE5929;
 }
-
 .checkbox1.activebox svg{
-  display: inline-block;
+  opacity: 1;
 }
 
 

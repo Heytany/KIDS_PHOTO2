@@ -485,18 +485,14 @@ body {
   border: 1px solid #A4B8C1;
   box-sizing: border-box;
   border-radius: 5px;
-}
-
-.contacts-container__input-message textarea {
-  resize: none;
-}
-
-.contacts-container__input-email input,
-.contacts-container__input-message textarea {
   padding: 12px;
   width: 100%;
   font-size: 14px;
   line-height: 16px;
+}
+
+.contacts-container__input-message textarea {
+  resize: none;
 }
 
 .contacts-container__input-message textarea {
@@ -1139,6 +1135,76 @@ body {
   color: #FF7A49;
   font-weight: 600;
 }
+.main-order-accept__link span {
+  font-size: 14px;
+  line-height: 16px;
+  color: #0091FF;
+}
+.main-order-accept__link {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.main-order-accept__spoiler-label {
+  margin-bottom: 12px;
+}
+.main-order-accept__spoiler-label span {
+  font-size: 14px;
+  line-height: 16px;
+  color: #A4B8C1;
+}
+.main-order-accept__spoiler-input textarea {
+  border: 1px solid #A4B8C1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  resize: none;
+  padding: 12px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 16px;
+  min-height: 84px;
+}
+.main-order-accept__input-counter {
+  margin-bottom: 15px;
+}
+.main-order-accept__input-counter p {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #A4B8C1;
+}
+.main-order-accept__spoiler-footer {
+  display: flex;
+}
+.main-order-accept__spoiler-footer button {
+  background: #FFFFFF;
+  border: 1px solid #FF7A49;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 120px;
+  height: 39px;
+}
+.main-order-accept__spoiler-footer button span {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FF7A49;
+}
+.main-order-accept__spoiler-footer p {
+  font-size: 14px;
+  line-height: 16px;
+  color: #A4B8C1;
+}
+.main-order-accept__spoiler-footer-meta {
+  margin: 0 10px 0px 15px;
+}
+.main-order-accept__spoiler {
+  display: none;
+}
+.main-order-accept__spoiler.active-spoiler {
+  display: block;
+}
 
 .checkbox1 input {
   display: none;
@@ -1148,14 +1214,14 @@ body {
   position: absolute;
   left: 3px;
   top: 6px;
-  display: none;
+  opacity: 0;
+  transition: all 0.6s ease 0s;
 }
 
 .checkbox1 {
   padding: 0 0 0 45px;
   position: relative;
   cursor: pointer;
-  transition: all 0.3s ease 0s;
 }
 
 .checkbox1:before {
@@ -1169,6 +1235,7 @@ body {
   border: 1px solid #A4B8C1;
   box-sizing: border-box;
   border-radius: 5px;
+  transition: all 0.6s ease 0s;
 }
 
 .checkbox1.activebox:before {
@@ -1176,7 +1243,7 @@ body {
 }
 
 .checkbox1.activebox svg {
-  display: inline-block;
+  opacity: 1;
 }
 
 /* Заказать_Фото Конец*/

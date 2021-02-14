@@ -1,4 +1,4 @@
-$(document).ready(function (){
+$(function (){
     $.each($('.checkbox1'),function (index,val){
         if($(this).find('input').prop('checked')==true){
             $(this).addClass('activebox');
@@ -17,6 +17,20 @@ $(document).ready(function (){
             }
         $(this).toggleClass('activebox');
         return false;
+    });
+
+    $('.main-order-accept__link').click(function (event){
+
+        $(this).toggleClass('active-spoiler').next().slideToggle(250);
+
+        if($(this).hasClass('active-spoiler')){
+
+            $(this).find('span').html("Скрыть комментарий");
+
+        } else
+        {
+            $(this).find('span').html("Оставить комментарий");
+        }
     });
 
 })
