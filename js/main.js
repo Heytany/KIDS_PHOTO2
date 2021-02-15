@@ -1,17 +1,17 @@
 $(function () {
 	
+	
 	//Функция, которая получает текущю большую фотку, в зависимости от того, какой сейчас таб
 	function getCurBigPhoto() {
 		const bigImg = document.querySelectorAll(".plots-slider__image img");
 		let CurBigImg
-		bigImg.forEach( function (img)  {
-			if ($(img).is(':visible')){
+		bigImg.forEach(function (img) {
+			if ($(img).is(':visible')) {
 				CurBigImg = img
 			}
 		})
 		return CurBigImg
 	}
-	
 	
 	
 	//<Сюжеты>
@@ -48,17 +48,17 @@ $(function () {
 		
 		// console.log(otherTabName)
 		let otherTabsVisibleTrigger = true;
-		otherTabName.forEach(function(otherTab) {
-			if($('.tab-'+otherTab).is(':visible')){
+		otherTabName.forEach(function (otherTab) {
+			if ($('.tab-' + otherTab).is(':visible')) {
 				otherTabsVisibleTrigger = false;
 			}
-			if (!otherTabsVisibleTrigger && $('.tab-'+clickedTabName).is(':hidden')){
-				$('.tab-'+otherTab).fadeOut(400, function () {
-					$('.tab-'+clickedTabName).fadeIn();
+			if (!otherTabsVisibleTrigger && $('.tab-' + clickedTabName).is(':hidden')) {
+				$('.tab-' + otherTab).fadeOut(400, function () {
+					$('.tab-' + clickedTabName).fadeIn();
 				});
 				//Навешиваем и убираем класс обесцвечивающий svg иконки табов
-				$('.'+otherTab).closest('.plots-sliders__tab').addClass("disable");
-				$('.'+clickedTabName).closest('.plots-sliders__tab').removeClass("disable");
+				$('.' + otherTab).closest('.plots-sliders__tab').addClass("disable");
+				$('.' + clickedTabName).closest('.plots-sliders__tab').removeClass("disable");
 				
 			}
 		});
@@ -69,4 +69,32 @@ $(function () {
 	
 	//</Сюжеты>
 	
+	const maxSymbolsCounter = document.querySelector(".main-order-accept__input-counter p");
+	const commentInput = document.querySelector('.main-order-accept__spoiler-input textarea');
+	let maxSymbols = +$(maxSymbolsCounter).text().split("/")[1] || 200;
+	$(commentInput).on("input", function (event) {
+		let chars = this.value;
+		// console.log(event);
+		if (chars.length >= maxSymbols && !(event.key === 'Backspace' || event.code === 'Backspace')){
+			event.preventDefault();
+			this.value = chars.slice(0, maxSymbols);
+		}
+	});
+	
+	$(commentInput).on("keyup", function (event) {
+		let chars = this.value;
+		let charsLen;
+		if (chars.length >= maxSymbols && !(event.key === 'Backspace' || event.code === 'Backspace')) {
+			event.preventDefault();
+			charsLen = maxSymbols;
+
+		} else {
+			charsLen = chars.length;
+		}
+
+		maxSymbolsCounter.innerHTML = charsLen+'/'+maxSymbols;
+		
+	})
+	
+	//</Заказать фото>
 })
