@@ -172,6 +172,10 @@ h1, h2, h3, h4, h5, h6 {
   fill: #A4B8C1;
 }
 
+.plots-sliders__tab.disable .plots-sliders__svg.girl a svg path:last-child {
+  fill: white;
+}
+
 .plots-sliders__tab.disable .girl .label-girl,
 .plots-sliders__tab.disable .boy .label-boy {
   display: inline-block;
@@ -273,6 +277,12 @@ body {
   margin: 0 0 40px 0;
 }
 
+.main.slider-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer {
   background: #30454F;
   padding: 16px 0;
@@ -333,11 +343,13 @@ body {
   height: 39px;
   background-color: #FF7A49;
   border-radius: 5px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .topmenu__ordertext {
-  line-height: 3;
+  display: block;
   text-transform: uppercase;
   color: #FFFFFF;
 }
@@ -657,10 +669,6 @@ body {
 .plots-sliders {
   display: flex;
   justify-content: space-between;
-  /*  &__slider-mini {
-      width: 415px;
-      height: 415px;
-    }*/
 }
 .plots-sliders__main {
   flex: 64.8% 0 1;
@@ -691,6 +699,7 @@ body {
 }
 .plots-sliders__tab:last-child {
   margin-right: 0;
+  padding: 4px 0 0 0;
 }
 .plots-sliders__slide-label {
   margin-bottom: 30px;
@@ -699,6 +708,10 @@ body {
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
+}
+.plots-sliders__svg a {
+  display: block;
+  height: 100%;
 }
 
 .plots-slider__slide {
@@ -1070,6 +1083,9 @@ body {
 .main-order-accept__send, .main-order-accept__comment {
   flex: 49% 0 1;
 }
+.main-order-accept__comment {
+  min-height: 300px;
+}
 .main-order-accept .checkbox1 {
   display: flex;
   align-items: center;
@@ -1168,6 +1184,23 @@ body {
 }
 .main-order-accept__input-counter {
   margin-bottom: 15px;
+}
+.main-order-accept__input-counter.too-many-chars span {
+  color: #FF946D;
+}
+.main-order-accept__input-counter.too-many-chars_animation span {
+  animation: toManyChars 0.1s linear 2;
+}
+@keyframes toManyChars {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .main-order-accept__input-counter span {
   display: block;

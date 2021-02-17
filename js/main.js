@@ -68,19 +68,31 @@ $(function () {
 	})
 	
 	//</Сюжеты>
-	
-	const maxSymbolsCounter = document.querySelector(".main-order-accept__input-counter p");
+
+	//<Заказать фото>
+	const maxSymbolsCounter = document.querySelector(".main-order-accept__input-counter span");
 	const commentInput = document.querySelector('.main-order-accept__spoiler-input textarea');
 	let maxSymbols = +$(maxSymbolsCounter).text().split("/")[1] || 200;
 	$(commentInput).on("input", function (event) {
 		let chars = this.value;
-		// console.log(event);
 		if (chars.length >= maxSymbols && !(event.key === 'Backspace' || event.code === 'Backspace')){
 			event.preventDefault();
 			this.value = chars.slice(0, maxSymbols);
+			$(this).parent().addClass("too-many-chars");
+			$(maxSymbolsCounter).parent().addClass("too-many-chars");
+			$(maxSymbolsCounter).parent().addClass("too-many-chars_animation");
+
+		}
+		else{
+			$(this).parent().removeClass("too-many-chars");
+			$(maxSymbolsCounter).parent().removeClass("too-many-chars");
 		}
 	});
-	
+	//Возобновляем анимацию, чтоб тряслось каждый раз
+	$(maxSymbolsCounter).on('animationend', function () {
+		$(maxSymbolsCounter).parent().removeClass("too-many-chars_animation");
+	})
+
 	$(commentInput).on("keyup", function (event) {
 		let chars = this.value;
 		let charsLen;
@@ -93,8 +105,55 @@ $(function () {
 		}
 
 		maxSymbolsCounter.innerHTML = charsLen+'/'+maxSymbols;
-		
+
 	})
+
 	
+
+
+	$.each($('.checkbox1'), function (index, val) {
+		if ($(this).find('input').prop('checked') === true) {
+			$(this).addClass('activebox');
+		}
+	});
+
+
+	$(document).on('click', '.checkbox1:not(.checkbox-comment)', function (event) {
+		if ($(this).hasClass('activebox')) {
+
+			$(this).find('input').prop('checked', false);
+
+		} else {
+			$(this).find('input').prop('checked', true);
+		}
+		$(this).toggleClass('activebox');
+		return false;
+	});
+
+	$('.main-order-accept__link').click(function () {
+
+		$(this).toggleClass('active-spoiler').next().slideToggle(250);
+
+		if ($(this).hasClass('active-spoiler')) {
+
+			$(this).find('span').html("Скрыть комментарий");
+
+		} else {
+			$(this).find('span').html("Оставить комментарий");
+		}
+	});
+
+	$(".main-order-accept__spoiler-footer button").on("click", function (){
+		$('.main-order-accept__link').click();
+		const commentInput = document.querySelector('.main-order-accept__spoiler-input textarea');
+		const checkbox = $(this).closest('.main-order-accept__spoiler').siblings('.main-order-accept__check-box').find(".checkbox1");
+		if (commentInput.value.length){
+			$(checkbox).addClass('activebox');
+		}
+		else{
+			$(checkbox).removeClass('activebox');
+		}
+	});
+
 	//</Заказать фото>
 })

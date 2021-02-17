@@ -181,6 +181,12 @@ $maincolor: #FF7A49;
   circle{fill:#A4B8C1}
 }
 
+.plots-sliders__tab.disable .plots-sliders__svg.girl a svg{
+  path:last-child{
+    fill: white;
+  }
+}
+
 .plots-sliders__tab.disable .girl .label-girl,
 .plots-sliders__tab.disable .boy .label-boy {
   display: inline-block;
@@ -287,6 +293,12 @@ body {
   margin: 0 0 40px 0;
 }
 
+.main.slider-main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer {
   background: #30454F;
   padding: 16px 0;
@@ -351,11 +363,13 @@ body {
   height: 39px;
   background-color: #FF7A49;
   border-radius: 5px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .topmenu__ordertext {
-  line-height: 3;
+  display: block;
   text-transform: uppercase;
   color: #FFFFFF;
 }
@@ -753,6 +767,7 @@ body {
 
   &__tab:last-child {
     margin-right: 0;
+    padding: 4px 0 0 0;
   }
 
   &__slide-label {
@@ -765,10 +780,10 @@ body {
     text-transform: uppercase;
   }
 
-  /*  &__slider-mini {
-      width: 415px;
-      height: 415px;
-    }*/
+  &__svg a{
+    display: block;
+    height: 100%;
+  }
 
 
 }
@@ -1243,6 +1258,9 @@ body {
   &__comment{
     flex: 49% 0 1;
   }
+  &__comment{
+    min-height: 300px;
+  }
 
   .checkbox1{
     display: flex;
@@ -1355,6 +1373,26 @@ body {
 
   &__input-counter{
     margin-bottom: 15px;
+  }
+  &__input-counter.too-many-chars span{
+    color: #FF946D;
+  }
+
+  &__input-counter.too-many-chars_animation span{
+    animation: toManyChars 0.1s linear 2;
+  }
+
+  @keyframes toManyChars {
+    0%{
+      transform: translateX(-10px);
+    }
+    50%{
+      transform: translateX(10px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+
   }
 
   &__input-counter span{
