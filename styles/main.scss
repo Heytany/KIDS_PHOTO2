@@ -256,6 +256,11 @@ $maincolor: #FF7A49;
   box-shadow: 0 0 0 1px #0091FF;
 }
 
+.plotsm-slider__slide.swiper-slide.selected{
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #0091FF;
+}
+
 /*Состояния кнопок_конец*/
 
 img {
@@ -1274,6 +1279,11 @@ body {
     text-transform: uppercase;
     color: #30454F;
   }
+
+  &__cd-email.hidden-label{
+    display: none;
+  }
+
   &__decription{
     margin-bottom: 15px;
   }
@@ -1479,6 +1489,84 @@ body {
 }
 
 
-
-
 /* Заказать_Фото Конец*/
+/* Авторизация*/
+
+.main-auth{
+  display: flex;
+  &__input-button{
+  display: flex;
+  }
+
+  &__img-container{
+    padding: 10px;
+    height: 455px;
+    width: 306px;
+    border-radius: 5px;
+    background: rgba(0, 145, 255, 0.1);
+    text-align: center;
+    margin-right:30px ;
+  }
+
+  &__img-container img{
+    width: 100%;
+  }
+
+  &__code-input input{
+    border: 1px solid #A4B8C1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 11px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+
+  &__code-input button{
+  background: #FF7A49;
+  border-radius: 5px;
+  width: 207px;
+  height: 40px;
+  margin-left: -5px ;
+}
+
+  &__code-input button span{
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;}
+
+
+  &__info-img-container{
+    width: 332px;
+    height: 332px;
+  }
+
+  &__info-label{
+    margin: 15px 0 26px 0;
+  }
+  &__info-label p{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  }
+
+
+  &__info-img-container img{
+    width: 100%;
+  }
+
+  &__input-button div{
+    width: 130px;
+  }
+
+}
+
+.main-auth__input-container{
+  width: 130px;
+}
+
+/* Авторизация Конец*/
