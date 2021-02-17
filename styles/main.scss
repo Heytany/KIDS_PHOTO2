@@ -99,14 +99,15 @@ $maincolor: #FF7A49;
 .primal-button,
 .secondary-button,
 .another-button,
-.primal-text {
+.primal-text,
+.auth-button {
   -webkit-transition: all 250ms ease;
   -ms-transition: all 250ms ease;
   transition: all 250ms ease;
 
 }
 
-.primal-button:hover {
+.primal-button:hover, .auth-button:hover {
   background-color: #FF946D;
 }
 
@@ -115,9 +116,9 @@ $maincolor: #FF7A49;
 }
 
 .secondary-button:hover svg,
-.secondary-button:active svg,{
-  path{
-  stroke: #FFFFFF;
+.secondary-button:active svg, {
+  path {
+    stroke: #FFFFFF;
   }
 }
 
@@ -130,6 +131,14 @@ $maincolor: #FF7A49;
 .secondary-button:active {
   background-color: #DE5929;
   transform: translate(0, 5px);
+}
+
+.auth-button:active {
+  background-color: #DE5929;
+}
+
+.auth-button.disabled {
+  background-color: #FAC0AC;
 }
 
 .primal-button.disabled {
@@ -171,18 +180,23 @@ $maincolor: #FF7A49;
   box-shadow: 0 0 0 0 #FFFFFF;
 }
 
-.plots-sliders__tab.disable .plots-sliders__svg a svg{
-  path{
+.plots-sliders__tab.disable .plots-sliders__svg a svg {
+  path {
     fill: #A4B8C1;
   }
+
   circle:first-child {
-    stroke:#A4B8C1;
-    fill:#FFFFFF;}
-  circle{fill:#A4B8C1}
+    stroke: #A4B8C1;
+    fill: #FFFFFF;
+  }
+
+  circle {
+    fill: #A4B8C1
+  }
 }
 
-.plots-sliders__tab.disable .plots-sliders__svg.girl a svg{
-  path:last-child{
+.plots-sliders__tab.disable .plots-sliders__svg.girl a svg {
+  path:last-child {
     fill: white;
   }
 }
@@ -198,51 +212,60 @@ $maincolor: #FF7A49;
   color: #A4B8C1;
 }
 
-.plots-sliders__tab:hover .girl a span{
+.plots-sliders__tab:hover .girl a span {
   color: #FF946D;
 }
-.plots-sliders__tab:hover .boy a span{
+
+.plots-sliders__tab:hover .boy a span {
   color: #5CA2FF;
 }
 
-.plots-sliders__tab:hover div.girl .label-girl{
+.plots-sliders__tab:hover div.girl .label-girl {
   display: inline-block;
   border-bottom: 1px solid #FF946D;
 }
 
-.plots-sliders__tab:hover div.boy .label-boy{
+.plots-sliders__tab:hover div.boy .label-boy {
   display: inline-block;
   border-bottom: 1px solid #5CA2FF;
 }
 
 
-
-.plots-sliders__tab:hover .girl a svg{
-  path{
+.plots-sliders__tab:hover .girl a svg {
+  path {
 
     fill: #FF946D;
   }
-  path:last-child{
+
+  path:last-child {
     fill: #FFFFFF;
   }
+
   circle:first-child {
-    stroke:#FF946D;
-    fill:#FFFFFF;}
-  circle{fill:#FF946D}
+    stroke: #FF946D;
+    fill: #FFFFFF;
+  }
+
+  circle {
+    fill: #FF946D
+  }
 }
 
-.plots-sliders__tab:hover .boy a svg{
-  path{
+.plots-sliders__tab:hover .boy a svg {
+  path {
     //#5CA2FF
     fill: #5CA2FF;
   }
 
   circle:first-child {
-    stroke:#5CA2FF;
-    fill:#FFFFFF;}
-  circle{fill:#5CA2FF}
-}
+    stroke: #5CA2FF;
+    fill: #FFFFFF;
+  }
 
+  circle {
+    fill: #5CA2FF
+  }
+}
 
 
 .topmenu__menulink.selected {
@@ -251,12 +274,12 @@ $maincolor: #FF7A49;
   border-bottom: 2px solid #FF7A49;
 }
 
-.plotsm-slider__slide.swiper-slide:hover{
+.plotsm-slider__slide.swiper-slide:hover {
   border-radius: 5px;
   box-shadow: 0 0 0 1px #0091FF;
 }
 
-.plotsm-slider__slide.swiper-slide.selected{
+.plotsm-slider__slide.swiper-slide.selected {
   border-radius: 5px;
   box-shadow: 0 0 0 1px #0091FF;
 }
@@ -298,7 +321,7 @@ body {
   margin: 0 0 40px 0;
 }
 
-.main.slider-main{
+.main.slider-main {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -406,6 +429,7 @@ body {
   height: 16px;
 
 }
+
 //слайдер главной страницы СТРЕЛКИ и их настройки
 /*.slider-container .swiper-button-prev,
 .slider-container .swiper-button-next {
@@ -414,7 +438,7 @@ body {
   top: 42%;
 }*/
 
-.container.slider-container{
+.container.slider-container {
   position: relative;
 }
 
@@ -544,7 +568,6 @@ body {
 .contacts-container__input-message textarea {
   resize: none;
 }
-
 
 
 .contacts-container__input-message textarea {
@@ -785,7 +808,7 @@ body {
     text-transform: uppercase;
   }
 
-  &__svg a{
+  &__svg a {
     display: block;
     height: 100%;
   }
@@ -794,7 +817,7 @@ body {
 }
 
 .plots-slider {
-  &__slide{
+  &__slide {
     height: 710px;
     width: 710px;
     border-radius: 5px;
@@ -803,6 +826,7 @@ body {
     align-items: center;
     justify-content: center;
   }
+
   &__image {
     //background: rgba(0, 145, 255, 0.1);
   }
@@ -813,29 +837,26 @@ body {
   }
 }
 
-.boy  a{
+.boy a {
   color: #0091FF;
 }
 
-.girl a{
+.girl a {
   color: #FF7A49;
 }
 
-.plots-sliders__tab div.girl .label-girl{
+.plots-sliders__tab div.girl .label-girl {
   display: inline-block;
   border-bottom: 1px solid #FF7A49;
 }
-.plots-sliders__tab div.boy .label-boy{
+
+.plots-sliders__tab div.boy .label-boy {
   display: inline-block;
   border-bottom: 1px solid #0091FF;
 }
 
 
-
-
-
 .plotsm-slider {
-
 
 
   &__image {
@@ -856,14 +877,14 @@ body {
 }
 
 
-.plotsm-slider__slide.swiper-slide{
+.plotsm-slider__slide.swiper-slide {
   width: 200px;
   height: 200px;
   margin: 0 0 16px 0;
   cursor: pointer;
 }
 
-.plots-sliders__slider-mini{
+.plots-sliders__slider-mini {
   width: 415px;
   height: 415px;
   display: flex;
@@ -871,23 +892,23 @@ body {
   flex-wrap: wrap;
 }
 
-.tab-girl{
+.tab-girl {
   display: none;
 }
 
 /* Сюжеты_Фото Конец*/
 
 /* Заказать_Фото*/
-.order-info
-{
+.order-info {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
-  &__buttons{
+
+  &__buttons {
     display: flex;
   }
 
-  &__buttons button{
+  &__buttons button {
     display: flex;
     background: #FFFFFF;
     border: 1px solid #FF7A49;
@@ -897,26 +918,26 @@ body {
   }
 
 
-  &__buttons button:last-child{
+  &__buttons button:last-child {
     margin-right: 0px;
   }
 
-  &__buttons button div span{
+  &__buttons button div span {
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
     color: #FF7A49;
   }
 
-  &__buttons div:first-child{
+  &__buttons div:first-child {
     padding: 10.3px 10px 8.3px 30px;
   }
 
-  &__buttons div:last-child{
+  &__buttons div:last-child {
     padding: 8.3px 30px 5px 10px;
   }
 
-  &__rectangle{
+  &__rectangle {
     background: #FF7A49;
     border-radius: 5px;
     display: flex;
@@ -926,12 +947,12 @@ body {
     justify-content: space-around;
   }
 
-  &__cost{
+  &__cost {
     flex: 50% 0 1;
     text-align: right;
   }
 
-  &__cost span{
+  &__cost span {
     font-size: 20px;
     line-height: 19px;
     text-transform: uppercase;
@@ -939,22 +960,45 @@ body {
     font-weight: 600;
   }
 
-  &__r-icon{
+  &__r-icon {
     display: flex;
     flex: 10% 0 1;
     align-items: start;
     margin-top: 1px;
   }
-  &__basket{
+
+  &__basket {
     display: flex;
     flex: 30% 0 1;
     align-items: center;
   }
+
+  /// Редактировать заказ
+
+  &__change-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+  &__change-options div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.main-order{
-  &__inner-back{
+  &__change-options div:first-child {
+    margin-right: 30px;
+  }
+}
+
+.order-info__change-label,
+.order-info__cancel-label {
+  padding-left: 10px;
+}
+
+.main-order {
+  &__inner-back {
     background: rgba(0, 145, 255, 0.1);
     border-radius: 5px;
     display: flex;
@@ -962,13 +1006,15 @@ body {
     //height: 790px;
     margin-bottom: 20px;
   }
-  &__startend-column{
+
+  &__startend-column {
     display: flex;
     flex-direction: column;
     flex: 6% 0 1;
 
   }
-  &__item-column{
+
+  &__item-column {
     display: flex;
     flex-direction: column;
     flex: 15% 0 1;
@@ -978,27 +1024,27 @@ body {
   }
 
   &__item-column,
-  &__startend-column{
+  &__startend-column {
     margin: 10px 0;
   }
 
-  &__image-container{
+  &__image-container {
     margin: 10px 10px 30px 10px;
     height: 331px;
     width: 220px;
   }
 
-  &__image-container img{
+  &__image-container img {
     width: 100%;
     border-radius: 5px;
   }
 
-  &__blank-space{
+  &__blank-space {
     margin: 10px 10px 30px 10px;
     height: 331px;
   }
 
-  &__input-counter input{
+  &__input-counter input {
     display: block;
     height: 37px;
     width: 37px;
@@ -1015,11 +1061,11 @@ body {
 
   }
 
-  &__photo-type{
-      height: 37px;
+  &__photo-type {
+    height: 37px;
   }
 
-  &__type-label{
+  &__type-label {
     font-size: 14px;
     line-height: 16px;
     text-align: right;
@@ -1027,81 +1073,80 @@ body {
     color: #A4B8C1;
   }
 
-  &__type-label-size{
+  &__type-label-size {
     font-size: 18px;
     line-height: 21px;
     text-align: right;
     color: #30454F;
   }
 
-  &__photo-type{
+  &__photo-type {
     position: relative;
   }
-  &__type-label-price{
+
+  &__type-label-price {
     margin: 0;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-}
+  }
 
-  &__type-label-price span{
+  &__type-label-price span {
     font-size: 18px;
     line-height: 21px;
     color: #FF7A49;
     text-align: center;
   }
 
-  &__photo-couple &__input-counter{
+  &__photo-couple &__input-counter {
     margin: 8px 0;
   }
 
-  &__photo-couple{
+  &__photo-couple {
     margin-bottom: 14px;
     position: relative;
   }
+
   &__startend-column &__photo-couple,
   &__item-column &__photo-couple,
   {
     margin-bottom: 14px;
   }
 
-  &__startend-column &__photo-couple
-  {
+  &__startend-column &__photo-couple {
 
   }
-  &__item-column &__photo-couple::after
-  {
+
+  &__item-column &__photo-couple::after {
     position: absolute;
-    content:'';
-    display:inline-block;
-    vertical-align:middle;
-    width:500%;
-    height:1px;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 500%;
+    height: 1px;
     top: 106%;
-    background:#A4B8C1;
-    margin-left:-200%;
+    background: #A4B8C1;
+    margin-left: -200%;
     opacity: 0.4;
 
 
-    }
+  }
 
   &__startend-column &__photo-couple:last-child::after,
-  &__item-column &__photo-couple:nth-child(4)::after
-  {
-    content:none;
+  &__item-column &__photo-couple:nth-child(4)::after {
+    content: none;
   }
 
 
-  &__startend-column &__photo-couple::after
-  {
+  &__startend-column &__photo-couple::after {
     position: absolute;
-    content:'';
-    display:inline-block;
-    vertical-align:middle;
-    width:139%;
-    height:2px;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 139%;
+    height: 2px;
     top: 106%;
-    background:#FFFFFF;
+    background: #FFFFFF;
     margin-left: -16%;
 
   }
@@ -1112,16 +1157,13 @@ body {
     margin-bottom: 0px;
   }
 
-  &__item-column &__photo-couple:last-child
-  {
+  &__item-column &__photo-couple:last-child {
     background: #DE5929;
     opacity: 1;
   }
 
 
-
-
-  &__pick-size{
+  &__pick-size {
     margin: 22px 0px 25px 0;
     width: 195px;
     height: 39px;
@@ -1140,50 +1182,54 @@ body {
 
 }
 
-.main-order-options{
+.main-order-options {
   margin-bottom: 30px;
   background: rgba(0, 145, 255, 0.1);
   border-radius: 5px;
   padding: 10px;
-  &__background{
+
+  &__background {
     background: #FFFFFF;
     border-radius: 5px;
     padding: 20px;
   }
 
-  &__background2{
+  &__background2 {
     background: #FFFFFF;
 
     display: flex;
     justify-content: space-between;
   }
 
-  &__image{
+  &__image {
     flex: 49% 0 1;
     height: 280px;
 
   }
-  &__image img{
+
+  &__image img {
     width: 100%;
     border-radius: 5px;
   }
 
-  &__params{
+  &__params {
     flex: 49% 0 1;
     display: flex;
     flex-direction: column;
   }
-  &__prow{
+
+  &__prow {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 7px;
   }
-  &__prow:last-child{
+
+  &__prow:last-child {
     margin-bottom: 0px;
   }
 
-  &__prow div input{
+  &__prow div input {
     display: block;
     height: 37px;
     width: 37px;
@@ -1199,80 +1245,84 @@ body {
     color: #30454F;
   }
 
-  &__pname{
+  &__pname {
     flex: 24% 0 1;
   }
 
-  &__psize{
+  &__psize {
     flex: 14% 0 1;
     margin-left: -20%;
   }
 
-  &__pcost{
+  &__pcost {
     flex: 14% 0 1;
   }
 
-  &__pname span{
+  &__pname span {
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
     color: #A4B8C1;
   }
 
-  &__psize span{
+  &__psize span {
     font-size: 18px;
     line-height: 21px;
     color: #30454F;
 
   }
 
-  &__pcost span{
+  &__pcost span {
     font-size: 18px;
     line-height: 21px;
     color: #FF7A49;
   }
 
 
-  &__pick-size{
-  width: 195px;
-  height: 39px;
-  background: #FFFFFF;
-  border: 1px solid #FF7A49;
-  box-sizing: border-box;
-  border-radius: 5px;
+  &__pick-size {
+    width: 195px;
+    height: 39px;
+    background: #FFFFFF;
+    border: 1px solid #FF7A49;
+    box-sizing: border-box;
+    border-radius: 5px;
   }
-  &__pick-size span{
+
+  &__pick-size span {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
     text-transform: uppercase;
     color: #FF7A49;
   }
-  &__button-container{
+
+  &__button-container {
     margin-top: auto;
   }
 
 
 }
 
-.main-order-accept{
+.main-order-accept {
   display: flex;
   justify-content: space-between;
 
   &__send,
-  &__comment{
+  &__comment {
     flex: 49% 0 1;
   }
-  &__comment{
+
+  &__comment {
     min-height: 300px;
   }
 
-  .checkbox1{
+  .checkbox1 {
     display: flex;
     align-items: center;
     margin-bottom: 11px;
   }
-  .checkbox1  span{
+
+  .checkbox1 span {
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
@@ -1280,29 +1330,31 @@ body {
     color: #30454F;
   }
 
-  &__cd-email.hidden-label{
+  .main-order-accept__check-box.hidden-label,
+  .main-order-accept__cd-email.hidden-label, {
     display: none;
   }
 
-  &__decription{
+  &__decription {
     margin-bottom: 15px;
   }
+
   &__decription span,
-  &__decription-last span{
+  &__decription-last span {
     font-size: 14px;
     line-height: 16px;
     color: #A4B8C1;
   }
 
-  &__decription-last{
+  &__decription-last {
     margin-bottom: 40px;
   }
 
-  &__decription-last span:nth-child(1){
+  &__decription-last span:nth-child(1) {
     text-transform: uppercase;
   }
 
-  &__decription-last span:nth-child(2){
+  &__decription-last span:nth-child(2) {
     display: inline-block;
     padding: 0px 10px;
     font-size: 18px;
@@ -1310,34 +1362,37 @@ body {
     color: #30454F;
   }
 
-  &__decription-last span:nth-child(3){
+  &__decription-last span:nth-child(3) {
     font-size: 18px;
     line-height: 21px;
     color: #FF7A49;
   }
 
-  &__order-detail button{
+  &__order-detail button {
     width: 218px;
     height: 41px;
     background: #FF7A49;
     border-radius: 5px;
   }
-  &__order-detail button span{
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
+
+  &__order-detail button span {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
   }
 
-  &__order-detail{
+  &__order-detail {
     display: flex;
     align-items: center;
   }
-  &__order-cost{
+
+  &__order-cost {
     padding-left: 25px;
   }
-  &__order-cost span{
+
+  &__order-cost span {
 
     font-size: 20px;
     line-height: 19px;
@@ -1346,66 +1401,69 @@ body {
     font-weight: 600;
   }
 
-  &__link  span{
+  &__link span {
     font-size: 14px;
     line-height: 16px;
     color: #0091FF
   }
 
-  &__link{
+  &__link {
     margin-bottom: 15px;
     cursor: pointer;
   }
-  &__spoiler-label{
+
+  &__spoiler-label {
     margin-bottom: 12px;
   }
-  &__spoiler-label span{
+
+  &__spoiler-label span {
     font-size: 14px;
     line-height: 16px;
     color: #A4B8C1;
   }
 
-  &__spoiler-input.too-many-chars textarea{
+  &__spoiler-input.too-many-chars textarea {
     border: 1px solid #FF946D;
   }
 
-  &__spoiler-input textarea{
-      border: 1px solid #A4B8C1;
-      box-sizing: border-box;
-      border-radius: 5px;
-      resize: none;
-      padding: 12px;
-      width: 100%;
-      font-size: 14px;
-      line-height: 16px;
-      min-height: 84px;
+  &__spoiler-input textarea {
+    border: 1px solid #A4B8C1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    resize: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    min-height: 84px;
   }
 
-  &__input-counter{
+  &__input-counter {
     margin-bottom: 15px;
   }
-  &__input-counter.too-many-chars span{
+
+  &__input-counter.too-many-chars span {
     color: #FF946D;
   }
 
-  &__input-counter.too-many-chars_animation span{
+  &__input-counter.too-many-chars_animation span {
     animation: toManyChars 0.1s linear 2;
   }
 
   @keyframes toManyChars {
-    0%{
+    0% {
       transform: translateX(-10px);
     }
-    50%{
+    50% {
       transform: translateX(10px);
     }
-    100%{
+    100% {
       transform: translateX(0);
     }
 
   }
 
-  &__input-counter span{
+  &__input-counter span {
     display: block;
     font-size: 14px;
     line-height: 16px;
@@ -1413,10 +1471,12 @@ body {
     text-transform: uppercase;
     color: #A4B8C1;
   }
-  &__spoiler-footer{
+
+  &__spoiler-footer {
     display: flex;
   }
-  &__spoiler-footer button{
+
+  &__spoiler-footer button {
     background: #FFFFFF;
     border: 1px solid #FF7A49;
     box-sizing: border-box;
@@ -1425,50 +1485,55 @@ body {
     height: 39px;
   }
 
-  &__spoiler-footer button span{
+  &__spoiler-footer button span {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
     text-transform: uppercase;
     color: #FF7A49;
   }
-  &__spoiler-footer p{
-  font-size: 14px;
-  line-height: 16px;
-  color: #A4B8C1;
+
+  &__spoiler-footer p {
+    font-size: 14px;
+    line-height: 16px;
+    color: #A4B8C1;
   }
-  &__spoiler-footer-meta{
+
+  &__spoiler-footer-meta {
     margin: 0 10px 0px 15px;
   }
 
-  &__spoiler{
+  &__spoiler {
     display: none;
   }
 
-  &__spoiler.active-spoiler{
+  &__spoiler.active-spoiler {
     display: block;
   }
 
 }
 
 //Custom checkbox
-.checkbox1 input{
+.checkbox1 input {
   display: none;
 }
-.checkbox1 svg{
+
+.checkbox1 svg {
   position: absolute;
   left: 3px;
   top: 6px;
   opacity: 0;
   transition: all 0.6s ease 0s;
 }
-.checkbox1{
+
+.checkbox1 {
   padding: 0 0 0 45px;
   position: relative;
   cursor: pointer;
 
 }
-.checkbox1:before{
+
+.checkbox1:before {
   position: absolute;
   left: 0;
   top: 0;
@@ -1481,10 +1546,12 @@ body {
   border-radius: 5px;
   transition: all 0.6s ease 0s;
 }
-.checkbox1.activebox:before{
+
+.checkbox1.activebox:before {
   background-color: #DE5929;
 }
-.checkbox1.activebox svg{
+
+.checkbox1.activebox svg {
   opacity: 1;
 }
 
@@ -1492,27 +1559,29 @@ body {
 /* Заказать_Фото Конец*/
 /* Авторизация*/
 
-.main-auth{
+.main-auth {
   display: flex;
-  &__input-button{
-  display: flex;
+
+  &__input-button {
+    display: flex;
   }
 
-  &__img-container{
+  &__img-container {
     padding: 10px;
     height: 455px;
     width: 306px;
     border-radius: 5px;
     background: rgba(0, 145, 255, 0.1);
     text-align: center;
-    margin-right:30px ;
+    margin-right: 30px;
   }
 
-  &__img-container img{
+  &__img-container img {
     width: 100%;
+    height: 100%;
   }
 
-  &__code-input input{
+  &__code-input input {
     border: 1px solid #A4B8C1;
     box-sizing: border-box;
     border-radius: 5px;
@@ -1523,49 +1592,52 @@ body {
   }
 
 
-  &__code-input button{
-  background: #FF7A49;
-  border-radius: 5px;
-  width: 207px;
-  height: 40px;
-  margin-left: -5px ;
-}
+  &__code-input button {
+    background: #FF7A49;
+    border-radius: 5px;
+    width: 207px;
+    height: 40px;
+    margin-left: -5px;
+  }
 
-  &__code-input button span{
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;}
+  &__code-input button span {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+  }
 
 
-  &__info-img-container{
+  &__info-img-container {
     width: 332px;
     height: 332px;
   }
 
-  &__info-label{
+  &__info-label {
     margin: 15px 0 26px 0;
   }
-  &__info-label p{
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-  text-transform: uppercase;
+
+  &__info-label p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
   }
 
 
-  &__info-img-container img{
+  &__info-img-container img {
     width: 100%;
+    height: 100%;
   }
 
-  &__input-button div{
+  &__input-button div {
     width: 130px;
   }
 
 }
 
-.main-auth__input-container{
+.main-auth__input-container {
   width: 130px;
 }
 

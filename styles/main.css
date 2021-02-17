@@ -93,13 +93,14 @@ h1, h2, h3, h4, h5, h6 {
 .primal-button,
 .secondary-button,
 .another-button,
-.primal-text {
+.primal-text,
+.auth-button {
   -webkit-transition: all 250ms ease;
   -ms-transition: all 250ms ease;
   transition: all 250ms ease;
 }
 
-.primal-button:hover {
+.primal-button:hover, .auth-button:hover {
   background-color: #FF946D;
 }
 
@@ -121,6 +122,14 @@ h1, h2, h3, h4, h5, h6 {
 .secondary-button:active {
   background-color: #DE5929;
   transform: translate(0, 5px);
+}
+
+.auth-button:active {
+  background-color: #DE5929;
+}
+
+.auth-button.disabled {
+  background-color: #FAC0AC;
 }
 
 .primal-button.disabled {
@@ -846,6 +855,24 @@ body {
   flex: 30% 0 1;
   align-items: center;
 }
+.order-info__change-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order-info__change-options div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order-info__change-options div:first-child {
+  margin-right: 30px;
+}
+
+.order-info__change-label,
+.order-info__cancel-label {
+  padding-left: 10px;
+}
 
 .main-order__inner-back {
   background: rgba(0, 145, 255, 0.1);
@@ -1103,7 +1130,8 @@ body {
   text-transform: uppercase;
   color: #30454F;
 }
-.main-order-accept__cd-email.hidden-label {
+.main-order-accept .main-order-accept__check-box.hidden-label,
+.main-order-accept .main-order-accept__cd-email.hidden-label {
   display: none;
 }
 .main-order-accept__decription {
@@ -1310,6 +1338,7 @@ body {
 }
 .main-auth__img-container img {
   width: 100%;
+  height: 100%;
 }
 .main-auth__code-input input {
   border: 1px solid #A4B8C1;
@@ -1349,6 +1378,7 @@ body {
 }
 .main-auth__info-img-container img {
   width: 100%;
+  height: 100%;
 }
 .main-auth__input-button div {
   width: 130px;
