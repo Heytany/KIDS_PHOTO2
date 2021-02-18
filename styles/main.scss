@@ -285,7 +285,7 @@ $maincolor: #FF7A49;
 }
 
 
-.order-info__change-order a:hover svg{
+.order-info__change-order a:hover  svg{
   path{
   stroke: #5CA2FF;
   }
@@ -1698,8 +1698,20 @@ body {
    margin: 0 auto;
  }
   &__photo-change{
-   // display: flex;
+    display: flex;
+    justify-content: space-between;
   }
+  &__change-table{
+    flex: 70% 0 1;
+  }
+
+  &__changer-result{
+    flex: 20% 0 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+
   &__background{
     width: 563px;
     height: 563px;
@@ -1714,6 +1726,11 @@ body {
     object-fit: contain;
 
   }
+
+  &__photo-type, &__photo-size{
+    flex: 40% 0 1;
+  }
+
   &__photo-type span{
     font-size: 14px;
     line-height: 16px;
@@ -1730,6 +1747,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
+  }
+  &__change-row:last-child{
+    margin-bottom: 0px;
   }
   &__changer{
     display: flex;
@@ -1767,6 +1788,7 @@ body {
     height: 32px;
     width: 30px;
   }
+  &__fullcost span,
   &__cost span{
   font-size: 18px;
   line-height: 21px;
@@ -1774,9 +1796,141 @@ body {
 
   &__separator{
     display: flex;
-    flex: 33.3%;
     justify-content: space-between;
+    align-items: center;
+    flex: 40% 0 1;
   }
+  &__changer-calc div{
+    padding: 0 10px 10px 10px;
+  }
+  &__changer-calc p{
+    padding: 10px
+  }
+  &__changer-calc p{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #30454F;
+  }
+
+  &__changer-result button{
+      width: 141px;
+      height: 39px;
+      background: #FF7A49;
+      border-radius: 5px;
+  }
+
+  &__changer-result button span{
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  &__changer-background{
+    flex: auto 1 0;
+    background: rgba(0, 145, 255, 0.1);
+    margin-bottom: 8px;
+  }
+
+
 
 }
 /* Попапы Конец */
+
+/* Заказ успешно пошел в обработку */
+.acept-order{
+  &__main-label{
+    margin: 30px 0 20px 0;
+  }
+  &__main-label span{
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__info-label span{
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &__info-label{
+    margin-bottom: 10px;
+  }
+  &__info-label:last-child{
+    margin-bottom: 0px;
+  }
+  &__main-label , &__info-label,  &__svg{
+  text-align: center;
+  }
+
+  &__go-back a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 39px;
+    background: #FFFFFF;
+    border: 1px solid #FF7A49;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+  &__go-back a span{
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FF7A49;
+  }
+  &__go-back{
+    margin-top: 38px;
+  display: flex;
+  justify-content: center;}
+
+}
+
+.denied-order{
+  &__main-label{
+    margin: 30px 0 20px 0;
+  }
+  &__main-label span{
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__main-label ,  &__svg{
+    text-align: center;
+  }
+
+  &__go-back a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 242px;
+    height: 39px;
+    background: #FFFFFF;
+    border: 1px solid #FF7A49;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+  &__go-back a span{
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FF7A49;
+  }
+  &__go-back{
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;}
+
+}
+
+/* Заказ успешно пошел в обработку Конец*/

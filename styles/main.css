@@ -1433,6 +1433,18 @@ body {
   width: 563px;
   margin: 0 auto;
 }
+.pp-change-size__photo-change {
+  display: flex;
+  justify-content: space-between;
+}
+.pp-change-size__change-table {
+  flex: 70% 0 1;
+}
+.pp-change-size__changer-result {
+  flex: 20% 0 1;
+  display: flex;
+  flex-direction: column;
+}
 .pp-change-size__background {
   width: 563px;
   height: 563px;
@@ -1445,6 +1457,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.pp-change-size__photo-type, .pp-change-size__photo-size {
+  flex: 40% 0 1;
 }
 .pp-change-size__photo-type span {
   font-size: 14px;
@@ -1461,6 +1476,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
+}
+.pp-change-size__change-row:last-child {
+  margin-bottom: 0px;
 }
 .pp-change-size__changer {
   display: flex;
@@ -1498,17 +1517,133 @@ body {
   height: 32px;
   width: 30px;
 }
-.pp-change-size__cost span {
+.pp-change-size__fullcost span, .pp-change-size__cost span {
   font-size: 18px;
   line-height: 21px;
   color: #FF7A49;
 }
 .pp-change-size__separator {
   display: flex;
-  flex: 33.3%;
   justify-content: space-between;
+  align-items: center;
+  flex: 40% 0 1;
+}
+.pp-change-size__changer-calc div {
+  padding: 0 10px 10px 10px;
+}
+.pp-change-size__changer-calc p {
+  padding: 10px;
+}
+.pp-change-size__changer-calc p {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #30454F;
+}
+.pp-change-size__changer-result button {
+  width: 141px;
+  height: 39px;
+  background: #FF7A49;
+  border-radius: 5px;
+}
+.pp-change-size__changer-result button span {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.pp-change-size__changer-background {
+  flex: auto 1 0;
+  background: rgba(0, 145, 255, 0.1);
+  margin-bottom: 8px;
 }
 
 /* Попапы Конец */
+/* Заказ успешно пошел в обработку */
+.acept-order__main-label {
+  margin: 30px 0 20px 0;
+}
+.acept-order__main-label span {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.acept-order__info-label span {
+  font-size: 18px;
+  line-height: 21px;
+}
+.acept-order__info-label {
+  margin-bottom: 10px;
+}
+.acept-order__info-label:last-child {
+  margin-bottom: 0px;
+}
+.acept-order__main-label, .acept-order__info-label, .acept-order__svg {
+  text-align: center;
+}
+.acept-order__go-back a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 39px;
+  background: #FFFFFF;
+  border: 1px solid #FF7A49;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.acept-order__go-back a span {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FF7A49;
+}
+.acept-order__go-back {
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+}
+
+.denied-order__main-label {
+  margin: 35px 0 40px 0;
+}
+.denied-order__main-label span {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.denied-order__main-label, .denied-order__svg {
+  text-align: center;
+}
+.denied-order__go-back a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 242px;
+  height: 39px;
+  background: #FFFFFF;
+  border: 1px solid #FF7A49;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.denied-order__go-back a span {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FF7A49;
+}
+.denied-order__go-back {
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Заказ успешно пошел в обработку Конец*/
 
 /*# sourceMappingURL=main.css.map */
