@@ -255,6 +255,10 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 1px #0091FF;
 }
 
+.order-info__change-order a:hover svg {
+  stroke: #5CA2FF;
+}
+
 /*Состояния кнопок_конец*/
 img {
   pointer-events: none;
@@ -860,13 +864,28 @@ body {
   align-items: center;
   justify-content: center;
 }
-.order-info__change-options div {
+.order-info__change-options div a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .order-info__change-options div:first-child {
   margin-right: 30px;
+}
+.order-info__change-label span {
+  font-size: 16px;
+  line-height: 19px;
+  color: #0091FF;
+}
+.order-info__cancel-label span {
+  font-size: 16px;
+  line-height: 19px;
+  color: #FF7A49;
+}
+.order-info__cancel-order a, .order-info__change-order a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .order-info__change-label,
