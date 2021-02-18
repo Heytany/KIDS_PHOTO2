@@ -286,7 +286,29 @@ $maincolor: #FF7A49;
 
 
 .order-info__change-order a:hover svg{
+  path{
   stroke: #5CA2FF;
+  }
+}
+
+.order-info__change-order a:hover svg{
+  path{
+    stroke: #5CA2FF;
+  }
+}
+
+.order-info__cancel-order a:hover svg{
+  path{
+    stroke: #FF946D;
+  }
+}
+
+.order-info__change-order a:hover div span{
+  color:  #5CA2FF;
+}
+
+.order-info__cancel-order a:hover div span{
+  color: #FF946D;
 }
 
 /*Состояния кнопок_конец*/
@@ -1666,3 +1688,95 @@ body {
 }
 
 /* Авторизация Конец*/
+
+/* Попапы */
+.pp-change-size{
+  width: 883px;
+  height: 930px;
+ &__container{
+   width: 563px;
+   margin: 0 auto;
+ }
+  &__photo-change{
+   // display: flex;
+  }
+  &__background{
+    width: 563px;
+    height: 563px;
+    background: rgba(0, 145, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  &__background img{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+  }
+  &__photo-type span{
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #A4B8C1;
+  }
+
+  &__photo-size span{
+    font-size: 18px;
+    line-height: 21px;
+    color: #30454F;
+  }
+  &__change-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__changer{
+    display: flex;
+    width: 87px;
+    height: 32px;
+    border: 1px solid #0091FF;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  &__changer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    width: 27px;
+  }
+  &__changer div input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid rgba(0, 145, 255, 0.1);
+    border-right: 1px solid rgba(0, 145, 255, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    color: #30454F;
+  }
+  &__changer button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    height: 32px;
+    width: 30px;
+  }
+  &__cost span{
+  font-size: 18px;
+  line-height: 21px;
+  color: #FF7A49;}
+
+  &__separator{
+    display: flex;
+    flex: 33.3%;
+    justify-content: space-between;
+  }
+
+}
+/* Попапы Конец */
