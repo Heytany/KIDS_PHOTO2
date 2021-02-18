@@ -155,6 +155,7 @@ $maincolor: #FF7A49;
 
 .another-button:hover a {
   border: 1px solid #5CA2FF;
+  opacity: 1;
 }
 
 .small-photo a:hover img, .big-photo a:hover img,
@@ -631,11 +632,46 @@ body {
 }
 
 .bottommenu__info {
+
+  display: flex;
+}
+
+.bottommenu__label{
   font-size: 14px;
   line-height: 16px;
   text-decoration-line: underline;
   color: #FFFFFF;
 }
+
+.bottommenu__info div {
+  margin-right: 5px;
+}
+.bottommenu__info div:last-child {
+  margin-right: 0px;
+}
+
+.bottommenu__labels-copyright{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bottommenu__labels-copyright p{
+font-size: 14px;
+line-height: 16px;
+color: #FFFFFF;}
+
+.bottommenu__img-use{
+  height: 40px;
+  width: 50px;
+}
+.bottommenu__img-use img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
 
 
 .bottommenu__labelLink,
@@ -746,6 +782,7 @@ body {
     border-radius: 18px;
     padding: 7px 20px;
     border: 1px solid #0091FF;
+    opacity: 0.7;
   }
 
   &__label a span {
@@ -1693,6 +1730,7 @@ body {
 .pp-change-size{
   width: 883px;
   height: 930px;
+  border-radius: 5px;
  &__container{
    width: 563px;
    margin: 0 auto;
@@ -1838,6 +1876,25 @@ body {
 
 
 }
+
+.fancybox-navigation .fancybox-button--arrow_right{
+  position: absolute !important;
+  top: 45% !important;
+  right: 50% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.fancybox-button.fancybox-close-small{
+  background: #DE5929;
+  svg{
+    path{
+      fill: white;
+    }
+  }
+}
+
+
+
 /* Попапы Конец */
 
 /* Заказ успешно пошел в обработку */
