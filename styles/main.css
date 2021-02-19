@@ -1463,10 +1463,15 @@ body {
 
 /* Авторизация Конец*/
 /* Попапы */
+.popup-change-size.fancybox-content {
+  background: none;
+}
+
 .pp-change-size {
+  background: #FFFFFF;
   width: 883px;
-  height: 930px;
   border-radius: 5px;
+  padding: 40px 0;
 }
 .pp-change-size__container {
   width: 563px;
@@ -1490,9 +1495,15 @@ body {
   background: rgba(0, 145, 255, 0.1);
   border-radius: 5px;
   margin-bottom: 20px;
+  /*position: relative;*/
 }
 .pp-change-size__background img {
   border-radius: 5px;
+  /*    width: 100%;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);*/
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -1601,14 +1612,30 @@ body {
 
 .fancybox-navigation .fancybox-button--arrow_right {
   position: absolute !important;
-  top: 45% !important;
-  right: 50% !important;
+  top: 35% !important;
+  right: 29% !important;
   opacity: 1 !important;
   visibility: visible !important;
 }
 
+.fancybox-navigation .fancybox-button--arrow_left {
+  position: absolute !important;
+  top: 35% !important;
+  left: 29% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.fancybox-button.fancybox-button--arrow_right,
+.fancybox-button.fancybox-button--arrow_left {
+  background: none !important;
+  color: #DE5929 !important;
+}
+
 .fancybox-button.fancybox-close-small {
   background: #DE5929;
+  right: 18% !important;
+  border-radius: 3px 3px 0 0 !important;
 }
 .fancybox-button.fancybox-close-small svg path {
   fill: white;
