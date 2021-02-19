@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/main.css"/>
+
     <title>Заказать фото</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="img/icon/favicon.ico" type="image/x-icon">
@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="lib/fancybox/css/jquery.fancybox.css">
     <!-- Link slickslider CSS -->
     <link rel="stylesheet" href="lib/slick/slickslider.css">
+
+    <link rel="stylesheet" href="styles/main.css"/>
 </head>
 
 <body>
@@ -55,7 +57,9 @@
             <section class="order-info-section">
                 <div class="order-info">
                     <div class="order-info__buttons">
-                        <button type="button" class="order-info__b-info secondary-button">
+
+                        <button type="button" data-src="#05" data-fancybox="" data-modal="false"
+                                class="order-info__b-info secondary-button modal-inline_no-arrows">
                             <div class="order-info__b-label">
                                 <span class="secondary-button__text"> полезная информация</span>
                             </div>
@@ -72,7 +76,8 @@
                                 </svg>
                             </div>
                         </button>
-                        <button type="button" class="order-info__b-date secondary-button">
+                        <button type="button" data-src="#06"  data-modal="false"
+                                class="order-info__b-date secondary-button modal-inline_no-arrows">
                             <div class="order-info__b-label">
                                 <span class="secondary-button__text"> сроки выполнения</span>
                             </div>
@@ -227,7 +232,8 @@
                                     </div>
                                 </div>
 
-                                <button  type="button" data-src="#04" data-fancybox="group" data-modal="false" class="main-order__pick-size secondary-button modal-inline">
+                                <button type="button" data-src="#01" data-fancybox="group" data-modal="false"
+                                        class="main-order__pick-size secondary-button modal-inline">
                                     <span class="secondary-button__text">Выбрать размер</span>
                                 </button>
 
@@ -270,7 +276,8 @@
                                     </div>
                                 </div>
 
-                                <button  type="button" data-src="#03" data-fancybox="group" data-modal="false" class="main-order__pick-size secondary-button modal-inline">
+                                <button type="button" data-src="#02" data-fancybox="group" data-modal="false"
+                                        class="main-order__pick-size secondary-button modal-inline">
                                     <span class="secondary-button__text">Выбрать размер</span>
                                 </button>
 
@@ -313,7 +320,8 @@
                                     </div>
                                 </div>
 
-                                <button  type="button" data-src="#02" data-fancybox="group" data-modal="false" class="main-order__pick-size secondary-button modal-inline">
+                                <button type="button" data-src="#03" data-fancybox="group" data-modal="false"
+                                        class="main-order__pick-size secondary-button modal-inline">
                                     <span class="secondary-button__text">Выбрать размер</span>
                                 </button>
 
@@ -356,7 +364,8 @@
                                     </div>
                                 </div>
 
-                                <button  type="button" data-src="#01" data-fancybox="group" data-modal="false" class="main-order__pick-size secondary-button modal-inline">
+                                <button type="button" data-src="#04" data-fancybox="group" data-modal="false"
+                                        class="main-order__pick-size secondary-button modal-inline">
                                     <span class="secondary-button__text">Выбрать размер</span>
                                 </button>
 
@@ -445,8 +454,12 @@
                                         </div>
                                         <p class="main-order-options__pcost"><span>200р</span></p>
                                     </div>
+                                    <div class="main-order-options__prow">
+                                        <span class="main-order-options__prow-label">В зависимости от размера выбранного коллажа расположение и размер элементов могут незначительно отличатся.</span>
+                                    </div>
                                     <div class="main-order-options__button-container">
-                                        <button type="button" data-src="#00" data-fancybox="group" data-modal="false" class="main-order-options__pick-size secondary-button modal-inline">
+                                        <button type="button" data-src="#00" data-fancybox="group" data-modal="false"
+                                                class="main-order-options__pick-size secondary-button modal-inline">
                                             <span class="secondary-button__text">Выбрать размер</span>
                                         </button>
                                     </div>
@@ -507,7 +520,8 @@
                                 </div>
                             </div>
                             <div class="main-order-accept__order-detail">
-                                <button  type="submit" class="primal-button"><span>Оформить заказ</span></button>
+
+                                <button type="submit" data-src="#07" data-fancybox="group"  data-modal="false" class="primal-button modal-inline_no-arrows"><span>Оформить заказ</span></button>
                                 <div class="main-order-accept__order-cost">
                                     <span>1600</span>
                                     <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
@@ -545,7 +559,7 @@
                                     <span>0/200</span>
                                 </div>
                                 <div class="main-order-accept__spoiler-footer">
-                                    <button  type="submit" class="secondary-button">
+                                    <button type="submit" class="secondary-button">
                                         <span class="secondary-button__text">Готово</span>
                                     </button>
                                     <div class="main-order-accept__spoiler-footer-meta">
@@ -580,11 +594,19 @@
     <footer class="footer">
         <div class="bottommenu container">
             <div class="bottommenu__info">
+                <div class="bottommenu__img-use">
+                    <img src="./img/footer/ml.png" alt="">
+                </div>
+                <!--<div class="bottommenu__labels-use">
                 <div class="bottommenu__label">
                     <a href="./privacy.html" class="bottommenu__labelLink">Политика конфиденциальности</a>
                 </div>
                 <div class="bottommenu__label">
                     <a href="./terms-of-use.html" class="bottommenu__labelLink">Пользовательское соглашение</a>
+                </div>
+                </div>-->
+                <div class="bottommenu__labels-copyright">
+                    <p>©2009-2021</p>
                 </div>
             </div>
 
@@ -641,645 +663,10 @@
     </footer>
 </div>
 <div class="popups">
-    <div id="00" style="display: none">Hello</div>
+
+
     <form action="" method="get">
-    <div class="popup-change-size" id="01" style="display: none">
-            <div class="pp-change-size">
-            <div class="pp-change-size__container">
-            <div class="pp-change-size__background">
-                <img src="./img/order-detail/4.jpg" alt="">
-            </div>
-            <div class="pp-change-size__photo-change">
-                <div class="pp-change-size__change-table">
-                <div class="pp-change-size__change-row">
-                    <div class="pp-change-size__separator">
-                    <div class="pp-change-size__photo-type">
-                        <span>ФОТО</span>
-                    </div>
-                    <div class="pp-change-size__photo-size">
-                        <span>10x15</span>
-                    </div>
-                    </div>
-                    <div class="pp-change-size__separator">
-                    <div class="pp-change-size__changer">
-                        <button type="button" class="pp-change-size__minus">
-                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <div>
-                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                   class="main-order__input">
-                        </div>
-                        <button type="button" class="pp-change-size__plus">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="pp-change-size__cost">
-                        <span>200 р</span>
-                    </div></div>
-                </div>
-                    <div class="pp-change-size__change-row">
-                        <div class="pp-change-size__separator">
-                            <div class="pp-change-size__photo-type">
-                                <span>ФОТО</span>
-                            </div>
-                            <div class="pp-change-size__photo-size">
-                                <span>15x23</span>
-                            </div>
-                        </div>
-                        <div class="pp-change-size__separator">
-                            <div class="pp-change-size__changer">
-                                <button type="button" class="pp-change-size__minus">
-                                    <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <div>
-                                    <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                            class="main-order__input">
-                                </div>
-                                <button type="button" class="pp-change-size__plus">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="pp-change-size__cost">
-                                <span>200 р</span>
-                            </div></div>
-                    </div>
-                    <div class="pp-change-size__change-row">
-                        <div class="pp-change-size__separator">
-                            <div class="pp-change-size__photo-type">
-                                <span>ФОТО</span>
-                            </div>
-                            <div class="pp-change-size__photo-size">
-                                <span>20x30</span>
-                            </div>
-                        </div>
-                        <div class="pp-change-size__separator">
-                            <div class="pp-change-size__changer">
-                                <button type="button" class="pp-change-size__minus">
-                                    <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <div>
-                                    <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                            class="main-order__input">
-                                </div>
-                                <button type="button" class="pp-change-size__plus">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="pp-change-size__cost">
-                                <span>200 р</span>
-                            </div></div>
-                    </div>
-                    <div class="pp-change-size__change-row">
-                        <div class="pp-change-size__separator">
-                            <div class="pp-change-size__photo-type">
-                                <span>ФОТО</span>
-                            </div>
-                            <div class="pp-change-size__photo-size">
-                                <span>30x45</span>
-                            </div>
-                        </div>
-                        <div class="pp-change-size__separator">
-                            <div class="pp-change-size__changer">
-                                <button type="button" class="pp-change-size__minus">
-                                    <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <div>
-                                    <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                            class="main-order__input">
-                                </div>
-                                <button type="button" class="pp-change-size__plus">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="pp-change-size__cost">
-                                <span>200 р</span>
-                            </div></div>
-                    </div>
-                    <div class="pp-change-size__change-row">
-                        <div class="pp-change-size__separator">
-                            <div class="pp-change-size__photo-type">
-                                <span>МАГНИТ</span>
-                            </div>
-                            <div class="pp-change-size__photo-size">
-                                <span>6x8</span>
-                            </div>
-                        </div>
-                        <div class="pp-change-size__separator">
-                            <div class="pp-change-size__changer">
-                                <button type="button" class="pp-change-size__minus">
-                                    <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <div>
-                                    <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                            class="main-order__input">
-                                </div>
-                                <button type="button" class="pp-change-size__plus">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="pp-change-size__cost">
-                                <span>200 р</span>
-                            </div></div>
-                    </div>
-                    <div class="pp-change-size__change-row">
-                        <div class="pp-change-size__separator">
-                            <div class="pp-change-size__photo-type">
-                                <span>МАГНИТ</span>
-                            </div>
-                            <div class="pp-change-size__photo-size">
-                                <span>9x13</span>
-                            </div>
-                        </div>
-                        <div class="pp-change-size__separator">
-                            <div class="pp-change-size__changer">
-                                <button type="button" class="pp-change-size__minus">
-                                    <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <div>
-                                    <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                            class="main-order__input">
-                                </div>
-                                <button type="button" class="pp-change-size__plus">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="pp-change-size__cost">
-                                <span>200 р</span>
-                            </div></div>
-                    </div>
-                </div>
-                <div class="pp-change-size__changer-result">
-                    <div class="pp-change-size__changer-background">
-                    <div class="pp-change-size__changer-calc">
-                        <p>Сумма :</p>
-                        <div class="pp-change-size__fullcost"><span>
-                            2800 р
-                        </span></div>
-                    </div>
-                    </div>
-                    <button class="primal-button" type="submit"><span >ОК</span></button>
-                </div>
-            </div>
-            </div>
-            </div>
-        </div>
-    </form>
-    <form action="" method="get">
-        <div class="popup-change-size" id="02" style="display: none">
-            <div class="pp-change-size">
-                <div class="pp-change-size__container">
-                    <div class="pp-change-size__background">
-                        <img src="./img/order-detail/3.jpg" alt="">
-                    </div>
-                    <div class="pp-change-size__photo-change">
-                        <div class="pp-change-size__change-table">
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>ФОТО</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>10x15</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>ФОТО</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>15x23</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>ФОТО</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>20x30</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>ФОТО</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>30x45</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>МАГНИТ</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>6x8</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>МАГНИТ</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>9x13</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                        </div>
-                        <div class="pp-change-size__changer-result">
-                            <div class="pp-change-size__changer-background">
-                                <div class="pp-change-size__changer-calc">
-                                    <p>Сумма :</p>
-                                    <div class="pp-change-size__fullcost"><span>
-                            2800 р
-                        </span></div>
-                                </div>
-                            </div>
-                            <button class="primal-button" type="submit"><span >ОК</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-    <form action="" method="get">
-        <div class="popup-change-size" id="03" style="display: none">
-            <div class="pp-change-size">
-                <div class="pp-change-size__container">
-                    <div class="pp-change-size__background">
-                        <img src="./img/order-detail/2.jpg" alt="">
-                    </div>
-                    <div class="pp-change-size__photo-change">
-                        <div class="pp-change-size__change-table">
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>ФОТО</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>10x15</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>ФОТО</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>15x23</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>ФОТО</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>20x30</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>ФОТО</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>30x45</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>МАГНИТ</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>6x8</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                            <div class="pp-change-size__change-row">
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__photo-type">
-                                        <span>МАГНИТ</span>
-                                    </div>
-                                    <div class="pp-change-size__photo-size">
-                                        <span>9x13</span>
-                                    </div>
-                                </div>
-                                <div class="pp-change-size__separator">
-                                    <div class="pp-change-size__changer">
-                                        <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
-                                        </div>
-                                        <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="pp-change-size__cost">
-                                        <span>200 р</span>
-                                    </div></div>
-                            </div>
-                        </div>
-                        <div class="pp-change-size__changer-result">
-                            <div class="pp-change-size__changer-background">
-                                <div class="pp-change-size__changer-calc">
-                                    <p>Сумма :</p>
-                                    <div class="pp-change-size__fullcost"><span>
-                            2800 р
-                        </span></div>
-                                </div>
-                            </div>
-                            <button class="primal-button" type="submit"><span >ОК</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-    <form action="" method="get">
-        <div class="popup-change-size" id="04" style="display: none">
+        <div class="popup-change-size" id="01" style="display: none">
             <div class="pp-change-size">
                 <div class="pp-change-size__container">
                     <div class="pp-change-size__background">
@@ -1299,24 +686,30 @@
                                 <div class="pp-change-size__separator">
                                     <div class="pp-change-size__changer">
                                         <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                         <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                     </div>
                                     <div class="pp-change-size__cost">
                                         <span>200 р</span>
-                                    </div></div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="pp-change-size__change-row">
                                 <div class="pp-change-size__separator">
@@ -1330,24 +723,30 @@
                                 <div class="pp-change-size__separator">
                                     <div class="pp-change-size__changer">
                                         <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                         <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                     </div>
                                     <div class="pp-change-size__cost">
                                         <span>200 р</span>
-                                    </div></div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="pp-change-size__change-row">
                                 <div class="pp-change-size__separator">
@@ -1361,24 +760,30 @@
                                 <div class="pp-change-size__separator">
                                     <div class="pp-change-size__changer">
                                         <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                         <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                     </div>
                                     <div class="pp-change-size__cost">
                                         <span>200 р</span>
-                                    </div></div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="pp-change-size__change-row">
                                 <div class="pp-change-size__separator">
@@ -1392,24 +797,30 @@
                                 <div class="pp-change-size__separator">
                                     <div class="pp-change-size__changer">
                                         <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                         <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                     </div>
                                     <div class="pp-change-size__cost">
                                         <span>200 р</span>
-                                    </div></div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="pp-change-size__change-row">
                                 <div class="pp-change-size__separator">
@@ -1423,24 +834,30 @@
                                 <div class="pp-change-size__separator">
                                     <div class="pp-change-size__changer">
                                         <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                         <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                     </div>
                                     <div class="pp-change-size__cost">
                                         <span>200 р</span>
-                                    </div></div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="pp-change-size__change-row">
                                 <div class="pp-change-size__separator">
@@ -1454,24 +871,30 @@
                                 <div class="pp-change-size__separator">
                                     <div class="pp-change-size__changer">
                                         <button type="button" class="pp-change-size__minus">
-                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                         <div>
-                                            <input  min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-                                                    class="main-order__input">
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
                                     </div>
                                     <div class="pp-change-size__cost">
                                         <span>200 р</span>
-                                    </div></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="pp-change-size__changer-result">
@@ -1483,13 +906,986 @@
                         </span></div>
                                 </div>
                             </div>
-                            <button class="primal-button" type="submit"><span >ОК</span></button>
+                            <button class="primal-button" type="submit"><span>ОК</span></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </form>
+
+    <form action="" method="get">
+        <div class="popup-change-size" id="02" style="display: none">
+            <div class="pp-change-size">
+                <div class="pp-change-size__container">
+                    <div class="pp-change-size__background">
+                        <img src="./img/order-detail/2.jpg" alt="">
+                    </div>
+                    <div class="pp-change-size__photo-change">
+                        <div class="pp-change-size__change-table">
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>10x15</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>15x23</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>20x30</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>30x45</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>МАГНИТ</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>6x8</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>МАГНИТ</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>9x13</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pp-change-size__changer-result">
+                            <div class="pp-change-size__changer-background">
+                                <div class="pp-change-size__changer-calc">
+                                    <p>Сумма :</p>
+                                    <div class="pp-change-size__fullcost"><span>
+                            2800 р
+                        </span></div>
+                                </div>
+                            </div>
+                            <button class="primal-button" type="submit"><span>ОК</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form action="" method="get">
+        <div class="popup-change-size" id="03" style="display: none">
+            <div class="pp-change-size">
+                <div class="pp-change-size__container">
+                    <div class="pp-change-size__background">
+                        <img src="./img/order-detail/3.jpg" alt="">
+                    </div>
+                    <div class="pp-change-size__photo-change">
+                        <div class="pp-change-size__change-table">
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>10x15</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>15x23</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>20x30</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>30x45</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>МАГНИТ</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>6x8</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>МАГНИТ</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>9x13</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pp-change-size__changer-result">
+                            <div class="pp-change-size__changer-background">
+                                <div class="pp-change-size__changer-calc">
+                                    <p>Сумма :</p>
+                                    <div class="pp-change-size__fullcost"><span>
+                            2800 р
+                        </span></div>
+                                </div>
+                            </div>
+                            <button class="primal-button" type="submit"><span>ОК</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form action="" method="get">
+        <div class="popup-change-size" id="04" style="display: none">
+            <div class="pp-change-size">
+                <div class="pp-change-size__container">
+                    <div class="pp-change-size__background">
+                        <img src="./img/order-detail/4.jpg" alt="">
+                    </div>
+                    <div class="pp-change-size__photo-change">
+                        <div class="pp-change-size__change-table">
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>10x15</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>15x23</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>20x30</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>30x45</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>МАГНИТ</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>6x8</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>МАГНИТ</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>9x13</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pp-change-size__changer-result">
+                            <div class="pp-change-size__changer-background">
+                                <div class="pp-change-size__changer-calc">
+                                    <p>Сумма :</p>
+                                    <div class="pp-change-size__fullcost"><span>
+                            2800 р
+                        </span></div>
+                                </div>
+                            </div>
+                            <button class="primal-button" type="submit"><span>ОК</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form action="" method="get">
+        <div class="popup-change-size" id="00" style="display: none">
+
+            <div class="pp-change-size">
+                <div class="pp-change-size__container">
+                    <div class="pp-change-size__background">
+                        <img src="./img/order-detail/b2.png" alt="">
+                    </div>
+                    <div class="pp-change-size__photo-change">
+                        <div class="pp-change-size__change-table">
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>КОЛЛАЖ ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>10x15</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>КОЛЛАЖ ФОТО</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>15x23</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pp-change-size__change-row">
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__photo-type">
+                                        <span>КОЛЛАЖ МАГНИТ</span>
+                                    </div>
+                                    <div class="pp-change-size__photo-size">
+                                        <span>20x30</span>
+                                    </div>
+                                </div>
+                                <div class="pp-change-size__separator">
+                                    <div class="pp-change-size__changer">
+                                        <button type="button" class="pp-change-size__minus">
+                                            <svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <div>
+                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                                   class="main-order__input">
+                                        </div>
+                                        <button type="button" class="pp-change-size__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1V15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1 8H15" stroke="#0091FF" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="pp-change-size__cost">
+                                        <span>200 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pp-change-size__changer-result">
+                            <div class="pp-change-size__changer-background">
+                                <div class="pp-change-size__changer-calc">
+                                    <p>Сумма :</p>
+                                    <div class="pp-change-size__fullcost"><span>
+                            2800 р
+                        </span></div>
+                                </div>
+                            </div>
+                            <button class="primal-button" type="submit"><span>ОК</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+
+    <form action="" method="get">
+        <div class="popup-change-size" id="05" style="display: none">
+            <div class="pp-label-info">
+                <div class="pp-label-info__wrapper">
+                    <div class="pp-label-info__main-label">
+                        <span>Полезная информация</span>
+                    </div>
+                    <div class="pp-label-info__h-label">
+                        <span>РАЗМЕРЫ ФОТО</span>
+                    </div>
+                    <div class="pp-label-info__l-label">
+                        <span>Все размеры фотографий, магнитов и коллажей указаны в сантиметрах и могут иметь погрешность до 5 мм. Будьте внимательны при заказе фото под рамки, обратите внимание соответствие размеров рамок и фото. К примеру, фото размером 20х30 не подходит под рамку для фото размером А4 (21х29.7).</span>
+                    </div>
+                    <div class="pp-label-info__h-label">
+                        <span>Что такое магнит</span>
+                    </div>
+                    <div class="pp-label-info__text-image">
+                        <div class="pp-label-info__l-label">
+                            <span>Фото для магнитов печатаются в фотолабораториях посредством химической печати и накатываются на магнитный винил. Данный вид печати позволяет получить наилучшее качество, значительно превышающее результат типографского способа печати.</span>
+                        </div>
+                        <div class="pp-label-info__img">
+                            <img src="./img/popups/1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="pp-label-info__h-label">
+                        <span>Что такое коллаж</span>
+                    </div>
+                    <div class="pp-label-info__l-label">
+                        <span> Коллаж собирается из всех представленных на ваших образцах фото и печатается в фотолабораториях посредством химической печати. Для каждого сюжета создаются свой уникальный дизайн коллажа. </span>
+                    </div>
+                    <div class="pp-label-info__imageb">
+                        <img src="./img/order-detail/b2.png" alt="">
+                    </div>
+
+                    <div class="pp-label-info__h-label">
+                        <span>Что такое ФОТО В ЭЛЕКТРОННОМ ВИДЕ</span>
+                    </div>
+                    <div class="pp-label-info__l-label">
+                        <span> Для заказа доступны фотографии в электронном виде. В дальнейшем вы сможете самостоятельно распечатать фотографии или использовать файлы по своему усмотрению. Фото могут быть как записанными на CD, так и отправлены на вашу электронную почту (e-mail). Минимальный размер электронного варианта фото не менее 3000х4500 pix в формате jpg. Этого вполне достаточно для печати фотографий размером 30х45 и более. При отправке на электронную почту файлы не сжимаются и не теряют в качестве.</span>
+                    </div>
+                    <div class="pp-label-info__button-container">
+                    <button class=" pp-label-info__button primal-button" type="submit"><span>ОК</span></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <form action="" method="get">
+        <div class="popup-change-size" id="06" style="display: none">
+            <div class="pp-label-info">
+                <div class="pp-label-info__wrapper">
+                    <div class="pp-label-info__main-label">
+                        <span>Сроки выполнения</span>
+                    </div>
+                    <div class="pp-label-info__h-label">
+                        <span>до 17.04.2020 </span>
+                    </div>
+                    <div class="pp-label-info__l-label">
+                        <span>Все заказы оформленные до 17.04.2020 г. будут выданы в течение 7 рабочих дней</span>
+                    </div>
+                    <div class="pp-label-info__h-label">
+                        <span>с 17.04.2020 до 24.04.2020 </span>
+                    </div>
+                        <div class="pp-label-info__l-label">
+                            <span>Заказы оформленные после 17.04.2020 г., но не позднее 24.04.2020 г. будут выданы в течение 14 рабочих дней.</span>
+                        </div>
+                    <div class="pp-label-info__h-label">
+                        <span>После 24.04.2020</span>
+                    </div>
+                    <div class="pp-label-info__l-label">
+                        <span> После 24.04.2020 г. до 24.04.2021 г. для заказа будет доступна только электронная версия фотографий с отправкой на электронную почту. </span>
+                    </div>
+
+                    <div class="pp-label-info__button-container">
+                        <button class=" pp-label-info__button primal-button" type="submit"><span>ОК</span></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
 </div>
 <!-- Jquery -->
 <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
@@ -1499,8 +1895,8 @@
 <script src="lib/swiper/js/swiper-bundle.min.js"></script>
 <script src="js/Swiper_config.js"></script>
 <!-- Slick JS -->
-<script  src="lib/slick/slick.min.js"></script>
-<script  src="lib/slick/setups.js"></script>
+<script src="lib/slick/slick.min.js"></script>
+<script src="lib/slick/setups.js"></script>
 <!-- JS -->
 <script src="js/main.js"></script>
 </body>

@@ -208,8 +208,49 @@ $(function () {
 				overlay: {
 					locked: false
 				}
+			},
+
+			// Arrows
+			btnTpl: {
+				arrowLeft:
+					'<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
+					'<svg width="24" height="42" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">'+
+						'<path fill-rule="evenodd" clip-rule="evenodd" d="M22.8125 1.43728C21.6734 0.29825 19.8267 0.29825 18.6877 1.43728L1.18769 18.9373C0.0486584 20.0763 0.0486584 21.923 1.18769 23.0621L18.6877 40.5621C19.8267 41.7011 21.6734 41.7011 22.8125 40.5621C23.9515 39.423 23.9515 37.5763 22.8125 36.4373L7.37487 20.9997L22.8125 5.56207C23.9515 4.42304 23.9515 2.57631 22.8125 1.43728Z" fill="#FF7A49"/>'+
+					"</svg>"+
+					"</button>",
+
+				arrowRight:
+					'<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
+					'<svg width="24" height="42" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">'+
+						'<path fill-rule="evenodd" clip-rule="evenodd" d="M1.18752 1.43728C2.32655 0.29825 4.17328 0.29825 5.31231 1.43728L22.8123 18.9373C23.9513 20.0763 23.9513 21.923 22.8123 23.0621L5.31231 40.5621C4.17328 41.7011 2.32655 41.7011 1.18752 40.5621C0.0484946 39.423 0.0484946 37.5763 1.18752 36.4373L16.6251 20.9997L1.18752 5.56207C0.0484946 4.42304 0.0484946 2.57631 1.18752 1.43728Z" fill="#FF7A49"/>'+
+					"</svg>"+
+					"</button>"
+			},
+
+
+
+
+
+
+	});
+
+		$(".modal-inline_no-arrows").fancybox({
+		margin: 0,
+		padding: 20,
+		maxWidth: 600,
+		autoScale: true,
+		transitionIn: 'none',
+		transitionOut: 'none',
+		type: 'inline',
+		helpers: {
+			overlay: {
+				locked: false
 			}
-		});
+		},
+			showNavArrows: false,
+			'arrows': false,
+
+	});
 		//</Попапы>
 
 

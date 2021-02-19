@@ -276,6 +276,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #FF946D;
 }
 
+.pp-change-size__minus:hover svg path,
+.pp-change-size__plus:hover svg path {
+  stroke: #5CA2FF;
+}
+
 /*Состояния кнопок_конец*/
 img {
   pointer-events: none;
@@ -395,13 +400,13 @@ body {
 }
 
 .image-slider__wrapper {
-  margin: 0 0 53px 0;
+  margin: 0 0 100px 0;
 }
 
 .image-slider__image {
   text-align: center;
-  width: 333px;
-  height: 501px;
+  width: 383px;
+  height: 551px;
 }
 
 .image-slider__image img {
@@ -508,6 +513,12 @@ body {
 
 /*Соглашения и правила пользования_конец*/
 /*Контакты*/
+.contacts {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
 .contacts-container {
   max-width: 640px;
   color: #30454F;
@@ -781,6 +792,9 @@ body {
   line-height: 21px;
   text-transform: uppercase;
 }
+.plots-sliders .girl-padding {
+  padding-left: 12px;
+}
 .plots-sliders__svg a {
   display: block;
   height: 100%;
@@ -790,7 +804,7 @@ body {
   height: 710px;
   width: 710px;
   border-radius: 5px;
-  background: rgba(0, 145, 255, 0.1);
+  background: rgba(140, 140, 140, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -819,7 +833,7 @@ body {
 }
 
 .plotsm-slider__image {
-  background: rgba(0, 145, 255, 0.1);
+  background: rgba(140, 140, 140, 0.1);
   border-radius: 5px;
   height: 200px;
   width: 200px;
@@ -948,7 +962,7 @@ body {
 }
 
 .main-order__inner-back {
-  background: rgba(0, 145, 255, 0.1);
+  background: rgba(140, 140, 140, 0.1);
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
@@ -1004,7 +1018,7 @@ body {
   line-height: 16px;
   text-align: right;
   text-transform: uppercase;
-  color: #A4B8C1;
+  color: #0091ff;
 }
 .main-order__type-label-size {
   font-size: 18px;
@@ -1087,7 +1101,7 @@ body {
 
 .main-order-options {
   margin-bottom: 30px;
-  background: rgba(0, 145, 255, 0.1);
+  background: rgba(140, 140, 140, 0.1);
   border-radius: 5px;
   padding: 10px;
 }
@@ -1119,6 +1133,11 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 7px;
+}
+.main-order-options__prow .main-order-options__prow-label {
+  font-size: 14px;
+  line-height: 16px;
+  color: #A4B8C1;
 }
 .main-order-options__prow:last-child {
   margin-bottom: 0px;
@@ -1210,7 +1229,7 @@ body {
 .main-order-accept__decription {
   margin-bottom: 15px;
 }
-.main-order-accept__decription span, .main-order-accept__decription-last span {
+.main-order-accept .main-order-options__prow-label, .main-order-accept__decription span, .main-order-accept__decription-last span {
   font-size: 14px;
   line-height: 16px;
   color: #A4B8C1;
@@ -1394,6 +1413,13 @@ body {
 
 /* Заказать_Фото Конец*/
 /* Авторизация*/
+.main-auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .main-auth {
   display: flex;
 }
@@ -1405,7 +1431,7 @@ body {
   height: 455px;
   width: 306px;
   border-radius: 5px;
-  background: rgba(0, 145, 255, 0.1);
+  background: rgba(140, 140, 140, 0.1);
   text-align: center;
   margin-right: 30px;
 }
@@ -1492,23 +1518,24 @@ body {
 .pp-change-size__background {
   width: 563px;
   height: 563px;
-  background: rgba(0, 145, 255, 0.1);
+  background: rgba(140, 140, 140, 0.1);
   border-radius: 5px;
   margin-bottom: 20px;
-  /*position: relative;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .pp-change-size__background img {
+  width: 100%;
   border-radius: 5px;
-  /*    width: 100%;
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);*/
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.pp-change-size__photo-type, .pp-change-size__photo-size {
+.pp-change-size__photo-type {
+  flex: 50% 0 1;
+}
+.pp-change-size__photo-size {
   flex: 40% 0 1;
 }
 .pp-change-size__photo-type span {
@@ -1576,7 +1603,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex: 40% 0 1;
+  flex: 60% 0 1;
+}
+.pp-change-size__change-row .pp-change-size__separator:last-child {
+  flex: 38% 0 1;
 }
 .pp-change-size__changer-calc div {
   padding: 0 10px 10px 10px;
@@ -1606,39 +1636,105 @@ body {
 }
 .pp-change-size__changer-background {
   flex: auto 1 0;
-  background: rgba(0, 145, 255, 0.1);
+  background: rgba(140, 140, 140, 0.1);
   margin-bottom: 8px;
 }
 
 .fancybox-navigation .fancybox-button--arrow_right {
-  position: absolute !important;
-  top: 35% !important;
-  right: 29% !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+  position: absolute;
+  top: 35%;
+  right: 31%;
 }
 
 .fancybox-navigation .fancybox-button--arrow_left {
-  position: absolute !important;
-  top: 35% !important;
-  left: 29% !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+  position: absolute;
+  top: 35%;
+  left: 31%;
 }
 
 .fancybox-button.fancybox-button--arrow_right,
 .fancybox-button.fancybox-button--arrow_left {
-  background: none !important;
-  color: #DE5929 !important;
+  background: none;
+  color: #DE5929;
 }
 
 .fancybox-button.fancybox-close-small {
   background: #DE5929;
-  right: 18% !important;
-  border-radius: 3px 3px 0 0 !important;
+  right: 18%;
+  border-radius: 3px 3px 0 0;
 }
 .fancybox-button.fancybox-close-small svg path {
   fill: white;
+}
+
+.pp-label-info {
+  width: 638px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.pp-label-info__wrapper {
+  padding: 40px 35px;
+}
+.pp-label-info__main-label {
+  margin-bottom: 30px;
+}
+.pp-label-info__main-label span {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.pp-label-info__h-label {
+  margin-bottom: 13px;
+}
+.pp-label-info__h-label span {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.pp-label-info__l-label {
+  margin-bottom: 20px;
+}
+.pp-label-info__l-label span {
+  font-size: 18px;
+  line-height: 21px;
+}
+.pp-label-info__text-image {
+  display: flex;
+  justify-content: space-between;
+}
+.pp-label-info__text-image .pp-label-info__l-label {
+  flex: 49% 0 1;
+}
+.pp-label-info__text-image .pp-label-info__img {
+  flex: 45% 0 1;
+}
+.pp-label-info__text-image .pp-label-info__img img {
+  width: 100%;
+}
+.pp-label-info__imageb {
+  margin-bottom: 30px;
+}
+.pp-label-info__imageb img {
+  width: 100%;
+  border-radius: 5px;
+}
+.pp-label-info__button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.pp-label-info__button {
+  width: 81px;
+  height: 39px;
+  background: #FF7A49;
+  border-radius: 5px;
+}
+.pp-label-info__button span {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 /* Попапы Конец */
