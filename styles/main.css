@@ -410,7 +410,6 @@ body {
 }
 
 .image-slider__image img {
-  border-radius: 5px;
   width: 100%;
 }
 
@@ -1171,7 +1170,7 @@ body {
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #A4B8C1;
+  color: #0091ff;
 }
 .main-order-options__psize span {
   font-size: 18px;
