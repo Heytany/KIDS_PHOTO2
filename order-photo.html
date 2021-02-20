@@ -76,7 +76,7 @@
                                 </svg>
                             </div>
                         </button>
-                        <button type="button" data-src="#06"  data-modal="false"
+                        <button type="button" data-src="#06" data-modal="false"
                                 class="order-info__b-date secondary-button modal-inline_no-arrows">
                             <div class="order-info__b-label">
                                 <span class="secondary-button__text"> сроки выполнения</span>
@@ -201,11 +201,11 @@
 
                                 <div class="main-order__photo-couple">
                                     <div class="main-order__input-counter">
-                                        <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                        <input  readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                class="main-order__input">
                                     </div>
                                     <div class="main-order__input-counter">
-                                        <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                        <input  readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                class="main-order__input">
                                     </div>
                                 </div>
@@ -498,7 +498,7 @@
                                     <span class="main-order-accept__cost">1200р</span>
                                 </div>
                             </div>
-                            <div class="main-order-accept__check-box hidden-label">
+                            <div class="main-order-accept__check-box">
                                 <div class="checkbox1">
                                     <input type="checkbox" name="email-comment" value="no">
                                     <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
@@ -508,8 +508,8 @@
                                     </svg>
                                     <span>фото в электронном виде</span>
                                 </div>
-                            </div>
-                            <div class="main-order-accept__cd-email hidden-label">
+                            </div> <!--hidden-label-->
+                            <div class="main-order-accept__cd-email">
                                 <div class="main-order-accept__decription">
                                     <span>Вы можете получить все представленные на образцах фото в формате JPG с разрешением не менее 3000х4500 px, с отправкой на CD</span>
                                 </div>
@@ -518,10 +518,13 @@
                                     <span>    На CD    </span>
                                     <span class="main-order-accept__cost">1200р</span>
                                 </div>
-                            </div>
+                            </div>  <!--hidden-label-->
                             <div class="main-order-accept__order-detail">
 
-                                <button type="submit" data-src="#07" data-fancybox="group"  data-modal="false" class="primal-button modal-inline_no-arrows"><span>Оформить заказ</span></button>
+                                <button type="submit" data-src="#07" data-fancybox="" data-modal="false"
+                                        class="primal-button modal-inline_no-arrows">
+                                    <span>Оформить заказ</span>
+                                </button>
                                 <div class="main-order-accept__order-cost">
                                     <span>1600</span>
                                     <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
@@ -664,7 +667,6 @@
 </div>
 <div class="popups">
 
-
     <form action="" method="get">
         <div class="popup-change-size" id="01" style="display: none">
             <div class="pp-change-size">
@@ -693,7 +695,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -730,7 +732,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -767,7 +769,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -804,7 +806,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -841,7 +843,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -878,7 +880,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -942,7 +944,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -979,7 +981,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1016,7 +1018,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1053,7 +1055,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1090,7 +1092,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1127,7 +1129,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1191,7 +1193,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1228,7 +1230,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1265,7 +1267,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1302,7 +1304,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1339,7 +1341,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1376,7 +1378,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1440,7 +1442,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1477,7 +1479,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1514,7 +1516,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1551,7 +1553,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1588,7 +1590,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1625,7 +1627,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1690,7 +1692,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1727,7 +1729,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1764,7 +1766,7 @@
                                             </svg>
                                         </button>
                                         <div>
-                                            <input min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+                                            <input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
                                                    class="main-order__input">
                                         </div>
                                         <button type="button" class="pp-change-size__plus">
@@ -1800,7 +1802,6 @@
 
         </div>
     </form>
-
 
     <form action="" method="get">
         <div class="popup-change-size" id="05" style="display: none">
@@ -1843,7 +1844,7 @@
                         <span> Для заказа доступны фотографии в электронном виде. В дальнейшем вы сможете самостоятельно распечатать фотографии или использовать файлы по своему усмотрению. Фото могут быть как записанными на CD, так и отправлены на вашу электронную почту (e-mail). Минимальный размер электронного варианта фото не менее 3000х4500 pix в формате jpg. Этого вполне достаточно для печати фотографий размером 30х45 и более. При отправке на электронную почту файлы не сжимаются и не теряют в качестве.</span>
                     </div>
                     <div class="pp-label-info__button-container">
-                    <button class=" pp-label-info__button primal-button" type="submit"><span>ОК</span></button>
+                        <button class=" pp-label-info__button primal-button" type="submit"><span>ОК</span></button>
                     </div>
                 </div>
             </div>
@@ -1867,9 +1868,9 @@
                     <div class="pp-label-info__h-label">
                         <span>с 17.04.2020 до 24.04.2020 </span>
                     </div>
-                        <div class="pp-label-info__l-label">
-                            <span>Заказы оформленные после 17.04.2020 г., но не позднее 24.04.2020 г. будут выданы в течение 14 рабочих дней.</span>
-                        </div>
+                    <div class="pp-label-info__l-label">
+                        <span>Заказы оформленные после 17.04.2020 г., но не позднее 24.04.2020 г. будут выданы в течение 14 рабочих дней.</span>
+                    </div>
                     <div class="pp-label-info__h-label">
                         <span>После 24.04.2020</span>
                     </div>
@@ -1883,6 +1884,130 @@
                 </div>
             </div>
 
+        </div>
+    </form>
+
+    <form action="" method="get">
+        <div class="popup-change-size" id="07" style="display: none">
+            <div class="pp-orderl-info">
+                <div class="pp-orderl-info__main-label">
+                    <span>Ваш заказ:</span>
+                </div>
+                <div class="pp-orderl-info__table">
+                    <div class="pp-orderl-info__row main-row">
+                        <div class="pp-orderl-info__row-label ">
+                            <span>Наименование</span>
+                        </div>
+
+                        <div class="pp-orderl-info__row-label">
+                            <span>Количество</span>
+                        </div>
+
+                        <div class="pp-orderl-info__row-label">
+                            <span>Стоимость</span>
+                        </div>
+                    </div>
+                    <div class="pp-orderl-info__row second-row">
+                        <div class="pp-orderl-info__row-label-meta ">
+                            <span>ФОТО 10х15</span>
+                        </div>
+                        <div class="pp-orderl-info__row-label-meta ">
+                            <span>5 шт.</span>
+                        </div>
+                        <div class="pp-orderl-info__row-label-meta meta-cost">
+                            <span>700р</span>
+                        </div>
+                    </div>
+                    <div class="pp-orderl-info__row second-row">
+                        <div class="pp-orderl-info__row-label-meta ">
+                            <span>МАГНИТ 10х15</span>
+                        </div>
+                        <div class="pp-orderl-info__row-label-meta ">
+                            <span>5 шт.</span>
+                        </div>
+                        <div class="pp-orderl-info__row-label-meta meta-cost">
+                            <span>700р</span>
+                        </div>
+                    </div>
+                    <div class="pp-orderl-info__row second-row">
+                        <div class="pp-orderl-info__row-label-meta ">
+                            <span>ФОТО 10х15</span>
+                        </div>
+                        <div class="pp-orderl-info__row-label-meta ">
+                            <span>5 шт.</span>
+                        </div>
+                        <div class="pp-orderl-info__row-label-meta meta-cost">
+                            <span>700р</span>
+                        </div>
+                    </div>
+                    <div class="pp-orderl-info__row second-row">
+                        <div class="pp-orderl-info__row-label-meta ">
+                            <span>МАГНИТ 10х15</span>
+                        </div>
+                        <div class="pp-orderl-info__row-label-meta ">
+                            <span>5 шт.</span>
+                        </div>
+                        <div class="pp-orderl-info__row-label-meta meta-cost">
+                            <span>700р</span>
+                        </div>
+                    </div>
+                    <div class="pp-orderl-info__row main-row">
+                        <div class="pp-orderl-info__row-label ">
+                            <span>СУММА ЗАКАЗА:</span>
+                        </div>
+
+                        <div class="pp-orderl-info__row-label meta-cost">
+                            <span>1700р</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pp-orderl-info__inputs">
+                    <div class="pp-orderl-info__lb">
+                        <span>Укажите ваши данные для идентификации заказа:</span>
+                    </div>
+                    <div class="pp-orderl-info__input-container">
+                        <div>
+                            <input placeholder="Фамилия и Имя ребёнка" type="text" name="FIO" class="primal-text">
+                        </div>
+                        <div>
+                            <input placeholder="Группа" type="text" name="FIO" class="primal-text">
+                        </div>
+                    </div>
+                    <div class="pp-orderl-info__check-box">
+                        <div class="pp-orderl-info__checkbox">
+                        <div class="checkbox1">
+                            <input type="checkbox" name="email-comment" value="no">
+                            <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 1L6 12L1 7" stroke="white" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg> </div>
+                            <p>Подтрверждаю корректность данных и соглашаюсь с условиями <a href="./terms-of-use.html" target="_blank">пользовательского соглашения</a> и <a href="./privacy.html" target="_blank">политикой конфиденциальности</a></p>
+                        </div>
+                    </div>
+                    <div class="pp-orderl-info__b-container">
+                        <button type="submit" class="primal-button">
+                            <span >Заказать</span>
+                        </button>
+                        <div class="pp-orderl-info__footer-meta">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0001 18.3334C14.6025 18.3334 18.3334 14.6024 18.3334 10C18.3334 5.39765 14.6025 1.66669 10.0001 1.66669C5.39771 1.66669 1.66675 5.39765 1.66675 10C1.66675 14.6024 5.39771 18.3334 10.0001 18.3334Z"
+                                      stroke="#A4B8C1" stroke-width="1.5" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M10 6.66669V10" stroke="#A4B8C1" stroke-width="1.5"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 13.3333H10.0083" stroke="#A4B8C1" stroke-width="2"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <p>
+                            Заказ уйдет в работу 01.02.2021. Сделать отмену или изменить заказ после отправки в работу будет невозможно.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
 
