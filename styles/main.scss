@@ -36,6 +36,7 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 
+
 input, button, textarea {
   font-family: inherit;
 }
@@ -96,7 +97,12 @@ $maincolor: #FF7A49;
   font-style: normal;
 }
 
-
+input::-webkit-input-placeholder,
+input,
+textarea::-webkit-input-placeholder,
+textarea{
+color:#30454F;
+}
 /*Состояния кнопок*/
 .primal-button,
 .secondary-button,
