@@ -411,6 +411,7 @@ body {
 
 .image-slider__image img {
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .image-slider .swiper-pagination-bullet {
