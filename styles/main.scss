@@ -451,6 +451,7 @@ body {
 
 .main-slider {
   height: 100%;
+  width: 100%;
 }
 
 .image-slider__wrapper {
@@ -458,12 +459,23 @@ body {
   margin: 0 0 100px 0;
 }
 
+.image-slider__wrapper .image-slider__slide{
+ // left: -11.5%;
+}
+
+.swiper-slide-active.image-slider__slide{
+  transform: none !important;
+}
+
+
 .image-slider__image {
   text-align: center;
   //width: 333px;
   //height: 501px;
-  width: 383px;
-  height: 551px;
+/*  width: 383px;
+  height: 551px;*/
+    width: 456px;
+    height: 686px;
 }
 
 .image-slider__image img {
@@ -776,7 +788,6 @@ body {
 
   .big-photo {
     flex: 48% 0 1;
-    max-width: 575px;
     min-width: 575px;
   }
 
@@ -2402,3 +2413,177 @@ body {
 }
 
 /* Состояния для попапов Конец*/
+
+/* Адаптив*/
+@media (max-width: 1200px) {
+  .plots-container .big-photo{
+    min-width: 342px;
+  }
+  .plots-container .small-photo  {
+  min-width: 230px;}
+  .plots-container__photo{
+    margin-right: 18px;
+  }
+  .plots-container__row {
+    margin-bottom: 18px;
+  }
+  .plots-container__row:last-child {
+    margin-bottom: 0px;
+  }
+}
+///Сюжеты
+@media (max-width: 1030px) {
+  .plots-container__row {
+    margin-bottom: 0px;
+    flex-wrap: wrap;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .plots-container__row .plots-container__photo.small-photo:last-child{
+    margin-right: 0px;
+  }
+
+  .plots-container .big-photo{
+    min-width: 500px;
+    margin-bottom: 18px;
+  }
+  .plots-container .small-photo {
+    min-width: 241px;
+    margin-bottom: 18px;
+  }
+
+
+
+
+}
+@media (max-width: 528px) {
+  .plots-container__row {
+    margin-bottom: 0px;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .plots-container__row .plots-container__photo.small-photo:last-child{
+    margin-right: 0px;
+  }
+
+  .plots-container .big-photo{
+    min-width: 241px;
+    margin-bottom: 10px;
+  }
+/*  .plots-container .small-photo {
+    min-width: 241px;
+    margin-bottom: 10px;
+  }*/
+}
+@media (max-width: 830px) {
+  .bottommenu{
+    &__menuitems{
+      flex: 55% 0 1;
+    }
+}}
+
+///Сюжеты внутри
+@media (max-width: 1160px) {
+  .plots-sliders__slider-mini,.plots-sliders__slide-label{
+    margin-left: auto;
+  }
+
+  .plots-slider__slide{
+    height: 611px;
+    width: 611px;
+  }
+
+  .plotsm-slider__slide.swiper-slide {
+    width: 166px;
+    height: 166px;}
+
+  .plotsm-slider__image{
+    width: 166px;
+    height: 166px;
+  }
+  .plots-sliders__slide-label{
+    width: 345px;
+  }
+  .plots-sliders__slider-mini {
+    width: 345px;
+    height: 345px;}
+}
+@media (max-width: 990px) {
+  .plots-slider__slide{
+    height: 483px;
+    width: 483px;
+  }
+
+  .plotsm-slider__slide.swiper-slide {
+    width: 109px;
+    height: 109px;}
+
+  .plotsm-slider__image{
+    width: 109px;
+    height: 109px;
+  }
+  .plots-sliders__slide-label{
+    width: 220px;
+  }
+  .plots-sliders__slider-mini {
+    width: 220px;
+    height: 220px;}
+}
+
+///Сюжеты конец
+/// Хеадер и футер
+@media (max-width: 768px) {
+
+  .topmenu{
+    &__menuitems{
+      flex: 49.3333% 0 1;
+    }
+  }
+  .footer{
+    padding: 10px 0;
+  }
+
+  .bottommenu{
+    &__menuitems{
+      flex-wrap: wrap;
+      flex: 40% 0 1;
+    }
+    &__item{
+      flex: 50% 0 1;
+      padding: 3px 0;
+    }
+  }
+
+}
+@media (max-width: 480px) {
+
+  .bottommenu{
+    &__menuitems{
+      display: none;
+    }
+    &__iconsbody {
+      margin: 0 5px 0 0;}
+    &__iconsbody:last-child {
+      margin: 0;}
+  }
+
+}
+/// Хеадер и футер конец
+
+@media (max-width: 700px) {
+
+  .main-auth__info-img-container {
+    display: none;}
+  .main-auth__img-container{
+    order: 2;
+  }
+
+  .main-auth{
+    flex-direction: column;
+  }
+
+}
+
