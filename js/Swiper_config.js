@@ -1,7 +1,6 @@
 var swiper = new Swiper('.image-slider', {
-	spaceBetween: 10,
 	centeredSlides: true,
-	slidesPerView: 4, //3.307,
+	slidesPerView: 3.35,
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
@@ -10,7 +9,7 @@ var swiper = new Swiper('.image-slider', {
 	//slidesPerGroup: 1,
 	//initialSlide: 1,
 	loop: true,
-	watchOverFlow: false,
+	watchOverFlow: true,
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true,
@@ -34,24 +33,28 @@ var swiper = new Swiper('.image-slider', {
 		eventsTarget: ".image-slider"
 	},
 
-/*	breakpoints: {
+	breakpoints: {
 		// when window width is >= 360px
 		360: {
-			spaceBetween: 5,
-			slidesPerView: 1.5,
-			centeredSlides: false,
+			slidesPerView: 1,
+		},
+		// when window width is >= 500px
+		500: {
+			slidesPerView: 2,
 		},
 		// when window width is >= 768px
 		768: {
-			spaceBetween: 5,
-			slidesPerView: 2.4,
+			slidesPerView: 2.37,
 		},
 		// when window width is >= 900px
-		900: {
-			spaceBetween: 30,
-			slidesPerView: 3.307,
+		1024: {
+			slidesPerView: 3.38,
+		},
+		// when window width is >= 1200px
+		1200: {
+			slidesPerView: 3.35,
 		}
-	}*/
+	}
 
 
 });
