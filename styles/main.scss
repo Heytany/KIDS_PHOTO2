@@ -1770,13 +1770,14 @@ body {
 
 .pp-change-size {
   background: #FFFFFF;
-  width: 883px;
+  max-width: 883px;
   border-radius: 5px;
   padding: 40px 0;
 
   &__container {
-    width: 563px;
+    max-width: 563px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   &__photo-change {
@@ -1796,7 +1797,7 @@ body {
 
 
   &__background {
-    width: 563px;
+    max-width: 563px;
     height: 563px;
     background: rgba(140, 140, 140, 0.1);
     border-radius: 5px;
@@ -1984,7 +1985,7 @@ body {
 /////// INFO and DATE
 
 .pp-label-info{
-  width: 638px;
+  max-width: 638px;
   background: #FFFFFF;
   border-radius: 5px;
   &__wrapper{
@@ -2093,7 +2094,7 @@ body {
 
 .pp-orderl-info{
 
-  width: 598px;
+  max-width: 598px;
   background: #FFFFFF;
   border-radius: 5px;
 

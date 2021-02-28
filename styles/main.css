@@ -1496,13 +1496,14 @@ body {
 
 .pp-change-size {
   background: #FFFFFF;
-  width: 883px;
+  max-width: 883px;
   border-radius: 5px;
   padding: 40px 0;
 }
 .pp-change-size__container {
-  width: 563px;
+  max-width: 563px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .pp-change-size__photo-change {
   display: flex;
@@ -1517,7 +1518,7 @@ body {
   flex-direction: column;
 }
 .pp-change-size__background {
-  width: 563px;
+  max-width: 563px;
   height: 563px;
   background: rgba(140, 140, 140, 0.1);
   border-radius: 5px;
@@ -1669,7 +1670,7 @@ body {
 }
 
 .pp-label-info {
-  width: 638px;
+  max-width: 638px;
   background: #FFFFFF;
   border-radius: 5px;
 }
@@ -1754,7 +1755,7 @@ body {
 }
 
 .pp-orderl-info {
-  width: 598px;
+  max-width: 598px;
   background: #FFFFFF;
   border-radius: 5px;
 }
