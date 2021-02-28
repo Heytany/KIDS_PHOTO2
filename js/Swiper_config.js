@@ -1,7 +1,7 @@
 var swiper = new Swiper('.image-slider', {
-	spaceBetween: 30,
+	spaceBetween: 10,
 	centeredSlides: true,
-	slidesPerView: 3.66, //3.307,
+	slidesPerView: 4, //3.307,
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
