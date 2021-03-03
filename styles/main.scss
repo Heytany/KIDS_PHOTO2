@@ -285,12 +285,12 @@ color:#30454F;
 
 .plotsm-slider__slide.swiper-slide:hover {
   border-radius: 5px;
-  box-shadow: 0 0 0 1px #0091FF;
+  border: 1px solid #0091FF;
 }
 
 .plotsm-slider__slide.swiper-slide.selected {
   border-radius: 5px;
-  box-shadow: 0 0 0 1px #0091FF;
+  border: 1px solid #0091FF;
 }
 
 
@@ -831,14 +831,18 @@ body {
 
 }
 
-
+.plots-tabs{
+  position: relative;
+  z-index: 2;
+  top: 60px;
+}
 .plots-sliders {
   display: flex;
   justify-content: space-between;
 
+  z-index: 1;
   &__main {
     flex: 64.8% 0 1;
-    max-width: 710px;
     overflow: hidden;
   }
 
@@ -847,14 +851,16 @@ body {
     display: flex;
     flex-direction: column;
     flex: 35.2% 0 1;
+    align-self: flex-end;
   }
 
   &__tab-container {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    flex: auto 1 0;
+    //flex: auto 1 0;
   }
+
 
   &__tab {
     margin-right: 25px;
@@ -904,18 +910,20 @@ body {
     width: 710px;
     border-radius: 5px;
     background: rgba(140, 140, 140, 0.1);
-    display: flex;
+/*    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
   }
 
   &__image {
-    //background: rgba(0, 145, 255, 0.1);
+    width: 100%;
+    height: 100%;
   }
 
   &__image img {
+    height: 100%;
     width: 100%;
-    border-radius: 5px;
+    object-fit: contain;
   }
 }
 
@@ -944,8 +952,8 @@ body {
   &__image {
     background: rgba(140, 140, 140, 0.1);
     border-radius: 5px;
-    height: 200px;
-    width: 200px;
+    height: 100%;
+    width: 100%;
 
   }
 
@@ -2451,15 +2459,14 @@ body {
     margin-bottom: 10px;
   }*/
 }
-
-
 ///Сюжеты внутри
+
 @media (max-width: 1160px) {
   .plots-sliders__slider-mini,.plots-sliders__slide-label{
     margin-left: auto;
   }
 
-  .plots-slider__slide{
+  .plots-slider__slide, .plots-slider__image{
     height: 611px;
     width: 611px;
   }
@@ -2468,19 +2475,15 @@ body {
     width: 166px;
     height: 166px;}
 
-  .plotsm-slider__image{
-    width: 166px;
-    height: 166px;
-  }
   .plots-sliders__slide-label{
-    width: 345px;
+    width: 348px;
   }
   .plots-sliders__slider-mini {
-    width: 345px;
-    height: 345px;}
+    width: 348px;
+    height: 348px;}
 }
 @media (max-width: 990px) {
-  .plots-slider__slide{
+  .plots-slider__slide, .plots-slider__image{
     height: 483px;
     width: 483px;
   }
@@ -2489,16 +2492,121 @@ body {
     width: 109px;
     height: 109px;}
 
-  .plotsm-slider__image{
-    width: 109px;
-    height: 109px;
-  }
   .plots-sliders__slide-label{
-    width: 220px;
+    width: 235px;
   }
   .plots-sliders__slider-mini {
-    width: 220px;
-    height: 220px;}
+    width: 235px;
+    height: 235px;}
+}
+
+.plots-slider__arright,.plots-slider__arrleft{
+  display: none;
+}
+
+@media (max-width: 780px){
+  .plots-tabs {
+    top: 0px;}
+  .plots-sliders__tab{
+    top: -70px;
+    position: relative;
+  }
+  .plots-sliders {
+    flex-wrap: wrap;}
+
+  .plots-sliders__main{
+    flex: 100% 0 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .plots-sliders__slider-mini{
+    flex-wrap: nowrap;
+  }
+
+  .plots-sliders__slide-label{
+    display: none;
+  }
+
+  .plots-sliders__mini{
+    height: auto;
+    flex: 100% 0 1;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row
+  }
+
+  .plots-sliders__slider-mini{
+  margin: 0;
+    flex: 100% 0 1;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .plots-sliders__slider-mini .plotsm-slider__slide:not(:last-child){
+    margin-right: 15px;
+  }
+
+  .plots-sliders__slide-container{
+    flex: 100% 0 1;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+
+  .plots-slider__arright,.plots-slider__arrleft{
+    display: block;
+    z-index: 50;
+  }
+
+  .plots-slider__arright{
+    position: relative;
+    right: 25px;
+  }
+
+  .plots-slider__arrleft{
+    position: relative;
+    left: 25px;
+  }
+
+
+
+}
+
+@media (max-width: 520px){
+  .plots-slider__slide, .plots-slider__image{
+    height: 340px;
+    width: 340px;
+  }
+
+  .plotsm-slider__slide.swiper-slide {
+    width: 78px;
+    height: 78px;
+  }
+
+  .plots-sliders__slider-mini .plotsm-slider__slide:not(:last-child){
+    margin-right: 7px;
+  }
+
+  .plots-slider__arright{
+    position: relative;
+    right: 25px;
+  }
+
+  .plots-slider__arrleft{
+    position: relative;
+    left: 25px;
+  }
+
 }
 
 ///Сюжеты конец
@@ -2516,8 +2624,6 @@ body {
   }
 
 }
-
-
 @media (max-width: 768px) {
 
 
@@ -2568,9 +2674,24 @@ body {
 }
 /// Авторизация конец
 /// Заказать фото
+
+.topmenu .order-info__not-button{
+  display: none;
+}
+
+
 @media (max-width: 1095px) {
 
-  .order-info__not-button{
+  .order-info .order-info__not-button,.topmenu__photoorder{
+    display: none;
+  }
+
+  .topmenu .order-info__not-button{
+    display: block;
+    order: 1;
+  }
+
+/*  .order-info__not-button{
     position: relative;
   }
   .order-info__rectangle{
@@ -2578,7 +2699,7 @@ body {
     top: -100px;
     left: -186px;
     z-index: 50;
-  }
+  }*/
 
 
   .main-order__startend-column{
@@ -2633,11 +2754,11 @@ body {
     content: "";
     display: inline-block;
     vertical-align: middle;
-    width: 120%;
+    width: 150%;
     height: 5px;
     top: 100%;
     background: #A4B8C1;
-    margin-left: -10%;
+    margin-left: -20%;
     opacity: 0.4;
   }
 
@@ -2646,11 +2767,11 @@ body {
     content: "";
     display: inline-block;
     vertical-align: middle;
-    width: 120%;
+    width: 150%;
     height: 5px;
     top: -3%;
     background: #A4B8C1;
-    margin-left: -10%;
+    margin-left: -20%;
     opacity: 0.4;
   }
 
@@ -2719,4 +2840,259 @@ body {
 
 }
 
+@media (max-width: 765px){
+
+  .main-order__type-label,
+  .main-order-options__pname span,
+  .pp-change-size__photo-type span{
+    font-size: 10px;
+    line-height: 12px;}
+
+  .main-order__type-label-size,
+  .main-order__type-label-price span,
+  .main-order-options__psize span,
+  .main-order-options__pcost span,
+  .pp-change-size__photo-size span,
+  .pp-change-size__fullcost span, .pp-change-size__cost span{
+    font-size: 14px;
+    line-height: 16px;}
+
+  .main-order__image-container {
+    margin: 10px 2px 20px 2px;
+    height: 131px;
+    width: 85px;}
+
+  .main-order__input-counter input,
+  .main-order-options__prow div input {
+    height: 24px;
+    width: 24px;}
+
+  .main-order__startend-column .main-order__photo-couple .main-order__input-counter {
+    margin: 0;}
+
+  .main-order__type-label {
+    left: 53px;
+    min-width: 40px;
+    top: -210px;}
+
+  .main-order__type-label-size {
+    left: 54px;
+    min-width: 40px;
+    top: -199px;}
+
+  .main-order__type-label-price {
+    right: 55px;
+    min-width: 50px;
+    top: -195px;}
+
+  .main-order-options-section{
+    margin-top: -240px;
+  }
+
+  .item-column-right {
+    align-items: flex-end;
+  }
+
+  .item-column-left {
+    align-items: flex-start;
+  }
+
+  .order-info__buttons button {
+    border: none;
+    margin-right: 15px;
+  }
+
+  .order-info__buttons button div span {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform:capitalize;
+    color: #FF7A49;}
+
+
+  /*
+
+
+  .first-item-column {
+    align-items: flex-end;
+  }
+
+  .last-item-column {
+    align-items: flex-start;
+  }
+  .order-info{
+    margin-bottom: 0px;
+  }*/
+
+}
+@media (max-width: 527px){
+  .first-item-column .main-order__photo-couple .main-order__input-counter{
+    position: relative;
+    left: 25px;
+  }
+  .last-item-column .main-order__photo-couple .main-order__input-counter{
+    position: relative;
+    right: 25px;
+  }
+
+  .item-column-right .main-order__photo-couple .main-order__input-counter{
+    position: relative;
+    right: 15px;
+  }
+  .item-column-left .main-order__photo-couple .main-order__input-counter{
+    position: relative;
+    left: 15px;
+  }
+
+
+}
+
 /// Заказать фото конец
+
+//<Меню бургер>
+.header__body{
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header__burger{
+  right: 10px;
+  position: absolute;
+  top: 28px;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+
+  &::before,
+  &::after{
+    content: "";
+    background-color: #0091FF;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  &::before{
+    top: 0;
+  }
+
+  &::after{
+    bottom: 0;
+  }
+
+  span{
+    position: absolute;
+    background-color: #0091FF;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+
+  }
+
+  &.active{
+    span{
+      transform: scale(0);
+    }
+
+    &::before{
+      transform: rotate(45deg);
+      top: 9px;
+    }
+
+    &::after{
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+  }
+}
+.header__menu{
+  text-align: right;
+  display: none;
+  position: absolute;
+  width: 160px;
+  top: 75px;
+  right: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #0091FF;
+
+  .header__list{
+    text-align: center;
+    li{
+      line-height: 27px;
+      padding: 7px;
+    }
+    li:not(:last-child){
+      border-bottom: 1px solid #DEE1E3;
+    }
+    li:hover{
+      background-color: #F3F3F3;
+    }
+  }
+
+  .header__link{
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+
+    text-decoration: none;
+    font-size: 18px;
+
+    color:  #30454F;
+    &.selected{
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
+
+
+@media (max-width: 650px){
+  .header__body{
+    display: flex;
+  }
+  .topmenu{
+    &__menuitems{
+      display: none;
+    }
+    &__logo{
+      order: 1;
+      a{
+        max-width: 90px;
+
+        img{
+          width: 100%;
+        }
+      }
+    }
+    &__photoorder{
+      order: 2;
+      position: relative;
+      right: 15px;
+
+      a{
+        width: 166px;
+        background-color: #fff;
+        border: 1px solid #ff7a49;
+
+        span{
+          color: #ff7a49;
+        }
+      }
+    }
+  }
+
+  .header__body{
+    order: 3;
+  }
+
+}
+
+//</Меню бургер>

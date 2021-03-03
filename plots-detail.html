@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Сюжеты_выбрано</title>
+    <title>Сюжеты детально</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="img/icon/favicon.ico" type="image/x-icon">
     <!-- Link Swiper's CSS -->
@@ -44,6 +44,18 @@
                     </a>
                 </div>
             </nav>
+            <div class="header__body">
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav style="display:none;" class="header__menu">
+                    <ul class="header__list">
+                        <li><a href="index.html" class="header__link">Главная</a></li>
+                        <li><a href="plots.html" class="header__link selected">Сюжеты</a></li>
+                        <li><a href="contacts.html" class="header__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="topmenu__photoorder">
                 <a href="./auth.html" class="topmenu__orderbutton primal-button">
                         <span class="topmenu__ordertext primal-button__text">
@@ -72,70 +84,86 @@
                     </div>
                 </div>
             </section>
+            <section class="plots-tabs">
+                <div class="plots-sliders__tab-container">
+                <div class="plots-sliders__tab disable">
+                    <div class="plots-sliders__svg girl">
+                        <a data-tab="girl" href="#">
+                            <svg width="46" height="42" viewBox="0 0 46 42" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="29.3887" cy="24.3083" r="15.3611" fill="white" stroke="#FF7A49"
+                                        stroke-width="2.5"/>
+                                <path d="M15.0139 0.0304584C23.4472 -0.480653 24.9167 5.5675 24.5972 8.65546C23.6389 9.29436 21.5944 10.3805 21.0833 9.61383C20.4444 8.65549 19.8056 7.69716 17.5694 7.69716C15.3333 7.69716 14.0556 10.2527 13.0972 13.4472C12.1389 16.6416 11.1806 19.1972 7.02778 20.4749C3.70556 21.4972 0.958333 17.7064 0 15.6833C4.47222 17.2805 5.43056 14.4055 5.75 13.1277C6.06944 11.8499 4.47222 0.669347 15.0139 0.0304584Z"
+                                      fill="#FF7A49"/>
+                                <circle cx="24.4613" cy="22.5749" r="2.1" fill="#FF7A49"/>
+                                <circle cx="34.6833" cy="22.5749" r="2.1" fill="#FF7A49"/>
+                                <path d="M37.6944 28.7805H21.0833C21.5092 31.1231 23.7666 35.8083 29.3888 35.8083C35.011 35.8083 37.2684 31.1231 37.6944 28.7805Z"
+                                      fill="#FF7A49"/>
+                                <path d="M29.389 15.6833C21.7223 15.6833 15.5464 19.3037 13.4167 21.1138C14.0556 16.6416 18.1445 7.69717 29.389 7.69717C40.6334 7.69717 44.7223 16.6416 45.3612 21.1138C43.2316 19.3037 37.0556 15.6833 29.389 15.6833Z"
+                                      fill="#FF7A49"/>
+                                <path d="M21.0833 18.8777L22.9999 13.1277L24.5971 18.5583L21.0833 18.8777Z"
+                                      fill="white"/>
+                            </svg>
 
+
+                        </a>
+                    </div>
+                    <div class="girl girl-padding"><a data-tab="girl" class="label-girl" href="#"><span>Девочка</span></a>
+                    </div>
+                </div>
+                <div class="plots-sliders__tab ">
+                    <div class="plots-sliders__svg boy">
+                        <a data-tab="boy" href="#">
+                            <svg width="34" height="38" viewBox="0 0 34 38" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="16.6111" cy="21.3083" r="15.3611" fill="white" stroke="#0091FF"
+                                        stroke-width="2.5"/>
+                                <circle cx="11.6837" cy="19.5749" r="2.1" fill="#0091FF"/>
+                                <circle cx="21.9057" cy="19.5749" r="2.1" fill="#0091FF"/>
+                                <path d="M24.9168 25.7805H8.30566C8.73159 28.1231 10.989 32.8083 16.6112 32.8083C22.2334 32.8083 24.4908 28.1231 24.9168 25.7805Z"
+                                      fill="#0091FF"/>
+                                <path d="M21.7227 8.7209C16.1227 14.7209 6.38932 17.2209 2.22266 17.7209L5.22266 11.7209L9.72266 8.22089L16.2227 6.22089H20.7227C22.7227 5.02089 21.8893 1.72089 21.2227 0.220886C23.6227 2.22089 23.8893 4.05423 23.7227 4.7209C24.5227 3.9209 25.7227 4.38756 26.2227 4.7209C24.6227 5.1209 23.8893 6.2209 23.7227 6.7209C30.5227 12.3209 31.8893 17.7209 31.7227 19.7209C27.3227 16.9209 23.2227 11.2209 21.7227 8.7209Z"
+                                      fill="#0091FF"/>
+                            </svg>
+
+
+                        </a></div>
+                    <div class="boy"><a data-tab="boy" class="label-boy" href="#"><span
+                            class="boy">Мальчик</span></a></div>
+                </div>
+            </div>
+            </section>
             <section class="plots-sliders">
+
                 <div class="plots-sliders__main tab-boy">
+
+
+                    <div class="plots-slider__arrleft">
+
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.63388 17.3839C9.14573 17.872 8.35427 17.872 7.86612 17.3839L0.366118 9.88388C-0.122038 9.39573 -0.122038 8.60427 0.366118 8.11612L7.86612 0.616118C8.35427 0.12796 9.14573 0.12796 9.63388 0.616118C10.122 1.10427 10.122 1.89573 9.63388 2.38388L3.01777 9L9.63388 15.6161C10.122 16.1043 10.122 16.8957 9.63388 17.3839Z" fill="#FF7A49"/>
+                        </svg>
+
+
+                    </div>
                     <div class="plots-slider__slide swiper-slide">
                         <div class="plots-slider__image">
                             <img src="img/plots-slider/1.jpg" alt="Картинка">
                         </div>
                     </div>
-                </div>
-                <div class="plots-sliders__main tab-girl">
-                    <div class="plots-slider__slide swiper-slide">
-                        <div class="plots-slider__image">
-                            <img src="img/plots-slider/5.jpg" alt="Картинка">
+                        <div class="plots-slider__arright">
+
+                            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.366116 0.616117C0.854272 0.127961 1.64573 0.127961 2.13388 0.616117L9.63388 8.11612C10.122 8.60427 10.122 9.39573 9.63388 9.88388L2.13388 17.3839C1.64573 17.872 0.854272 17.872 0.366116 17.3839C-0.122039 16.8957 -0.122039 16.1043 0.366116 15.6161L6.98223 9L0.366116 2.38388C-0.122039 1.89573 -0.122039 1.10427 0.366116 0.616117Z" fill="#FF7A49"/>
+                            </svg>
+
                         </div>
-                    </div>
+
+
+
                 </div>
                 <div class="plots-sliders__mini">
-                    <div class="plots-sliders__tab-container">
-                        <div class="plots-sliders__tab disable">
-                            <div class="plots-sliders__svg girl">
-                                <a data-tab="girl" href="#">
-                                    <svg width="46" height="42" viewBox="0 0 46 42" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="29.3887" cy="24.3083" r="15.3611" fill="white" stroke="#FF7A49"
-                                                stroke-width="2.5"/>
-                                        <path d="M15.0139 0.0304584C23.4472 -0.480653 24.9167 5.5675 24.5972 8.65546C23.6389 9.29436 21.5944 10.3805 21.0833 9.61383C20.4444 8.65549 19.8056 7.69716 17.5694 7.69716C15.3333 7.69716 14.0556 10.2527 13.0972 13.4472C12.1389 16.6416 11.1806 19.1972 7.02778 20.4749C3.70556 21.4972 0.958333 17.7064 0 15.6833C4.47222 17.2805 5.43056 14.4055 5.75 13.1277C6.06944 11.8499 4.47222 0.669347 15.0139 0.0304584Z"
-                                              fill="#FF7A49"/>
-                                        <circle cx="24.4613" cy="22.5749" r="2.1" fill="#FF7A49"/>
-                                        <circle cx="34.6833" cy="22.5749" r="2.1" fill="#FF7A49"/>
-                                        <path d="M37.6944 28.7805H21.0833C21.5092 31.1231 23.7666 35.8083 29.3888 35.8083C35.011 35.8083 37.2684 31.1231 37.6944 28.7805Z"
-                                              fill="#FF7A49"/>
-                                        <path d="M29.389 15.6833C21.7223 15.6833 15.5464 19.3037 13.4167 21.1138C14.0556 16.6416 18.1445 7.69717 29.389 7.69717C40.6334 7.69717 44.7223 16.6416 45.3612 21.1138C43.2316 19.3037 37.0556 15.6833 29.389 15.6833Z"
-                                              fill="#FF7A49"/>
-                                        <path d="M21.0833 18.8777L22.9999 13.1277L24.5971 18.5583L21.0833 18.8777Z"
-                                              fill="white"/>
-                                    </svg>
 
-
-                                </a>
-                            </div>
-                            <div class="girl girl-padding"><a data-tab="girl" class="label-girl" href="#"><span>Девочка</span></a>
-                            </div>
-                        </div>
-                        <div class="plots-sliders__tab ">
-                            <div class="plots-sliders__svg boy">
-                                <a data-tab="boy" href="#">
-                                    <svg width="34" height="38" viewBox="0 0 34 38" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="16.6111" cy="21.3083" r="15.3611" fill="white" stroke="#0091FF"
-                                                stroke-width="2.5"/>
-                                        <circle cx="11.6837" cy="19.5749" r="2.1" fill="#0091FF"/>
-                                        <circle cx="21.9057" cy="19.5749" r="2.1" fill="#0091FF"/>
-                                        <path d="M24.9168 25.7805H8.30566C8.73159 28.1231 10.989 32.8083 16.6112 32.8083C22.2334 32.8083 24.4908 28.1231 24.9168 25.7805Z"
-                                              fill="#0091FF"/>
-                                        <path d="M21.7227 8.7209C16.1227 14.7209 6.38932 17.2209 2.22266 17.7209L5.22266 11.7209L9.72266 8.22089L16.2227 6.22089H20.7227C22.7227 5.02089 21.8893 1.72089 21.2227 0.220886C23.6227 2.22089 23.8893 4.05423 23.7227 4.7209C24.5227 3.9209 25.7227 4.38756 26.2227 4.7209C24.6227 5.1209 23.8893 6.2209 23.7227 6.7209C30.5227 12.3209 31.8893 17.7209 31.7227 19.7209C27.3227 16.9209 23.2227 11.2209 21.7227 8.7209Z"
-                                              fill="#0091FF"/>
-                                    </svg>
-
-
-                                </a></div>
-                            <div class="boy"><a data-tab="boy" class="label-boy" href="#"><span
-                                    class="boy">Мальчик</span></a></div>
-                        </div>
-                    </div>
                     <div class="plots-sliders__slide-container tab-boy">
                         <div class="plots-sliders__slide-label">
                             <span>Джунгли</span>
@@ -164,6 +192,29 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section style="display: none" class="plots-sliders">
+
+                <div class="plots-sliders__main tab-girl">
+                    <div class="plots-slider__slide swiper-slide">
+                        <div class="plots-slider__image">
+                            <img src="img/plots-slider/5.jpg" alt="Картинка">
+                        </div>
+                    </div>
+                        <div class="plots-slider__arright">
+
+                            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.366116 0.616117C0.854272 0.127961 1.64573 0.127961 2.13388 0.616117L9.63388 8.11612C10.122 8.60427 10.122 9.39573 9.63388 9.88388L2.13388 17.3839C1.64573 17.872 0.854272 17.872 0.366116 17.3839C-0.122039 16.8957 -0.122039 16.1043 0.366116 15.6161L6.98223 9L0.366116 2.38388C-0.122039 1.89573 -0.122039 1.10427 0.366116 0.616117Z" fill="#FF7A49"/>
+                            </svg>
+
+                        </div>
+
+
+
+                </div>
+                <div class="plots-sliders__mini">
+
                     <div class="plots-sliders__slide-container tab-girl">
                         <div class="plots-sliders__slide-label">
                             <span>Джунгли</span>
