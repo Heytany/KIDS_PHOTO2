@@ -62,19 +62,32 @@ $(function () {
 		//</Решение проблемы со скачущими хэдерами и футерами>
 		
 		//<Хэдер>
-		$('.header__burger').on("click", function (e) {
-			$('.header__burger, .header__menu').toggleClass('active');
-			$('.header__menu').slideToggle(300);
-		})
+		// $('.header__burger').on("click", function (e) {
+		// 	$('.header__burger, .header__menu').toggleClass('active');
+		// 	$('.header__menu').slideToggle(300);
+		// });
 		//</Хэдер>
+		
 		
 		//<Сюжеты>
 		//Переключатель фоток
 		$('.plotsm-slider__image').on("click", function () {
 			const clickedImgSrc = this.querySelector("img").getAttribute("src");
 			let CurBigImg = getCurBigPhoto();
+			//Устанавливаем атрибут, какое фото сейчас встанет по счёту
+			$(CurBigImg)
+				.closest(".plots-slider__slide")
+				.attr(
+					'data-arr-nav', $(this).closest('.plotsm-slider__slide')
+						.index('.plotsm-slider__slide')
+				);
 			if (CurBigImg.getAttribute("src") !== clickedImgSrc) {
-				$(CurBigImg).fadeOut(300, function () {
+				$(CurBigImg).fadeOut(300, () => {
+					$(this)
+						.closest('.plots-sliders__slider-mini')
+						.find('.plotsm-slider__slide')
+						.removeClass('selected');
+					$(this).parent('.plotsm-slider__slide').addClass('selected');
 					CurBigImg.setAttribute('src', clickedImgSrc);
 					$(CurBigImg).fadeIn();
 				})
@@ -83,23 +96,20 @@ $(function () {
 		
 		//Табы
 		let tabsArray = [];
-		const allTabs = document.querySelectorAll(".plots-sliders__tab a");
+		const allTabs = document.querySelectorAll(".plots-sliders__tab");
 		//Собираем все блоки-табы (скрытые и не скрытые)
 		allTabs.forEach(function (tab) {
-			// console.log(tab);
 			tabsArray.push($(tab).data("tab"))
 		});
 		//Убираем повторяющиеся элементы
 		tabsArray = $.unique(tabsArray);
 		// console.log(tabsArray)
-		$(".plots-sliders__tab a").on("click", function (e) {
+		$(allTabs).on("click", function (e) {
 			e.preventDefault();
 			let clickedTabName = $(this).data("tab");
 			let otherTabName = tabsArray.filter(function (tabName) {
 				return tabName !== clickedTabName;
 			});
-			
-			
 			// console.log(otherTabName)
 			let otherTabsVisibleTrigger = true;
 			otherTabName.forEach(function (otherTab) {
@@ -108,7 +118,8 @@ $(function () {
 				}
 				if (!otherTabsVisibleTrigger && $('.tab-' + clickedTabName).is(':hidden')) {
 					$('.tab-' + otherTab).fadeOut(400, function () {
-						$('.tab-' + clickedTabName).fadeIn();
+						//Не теряем флекс и анимацию
+						$('.tab-' + clickedTabName).css("display", "flex").hide().fadeIn();
 					});
 					//Навешиваем и убираем класс обесцвечивающий svg иконки табов
 					$('.' + otherTab).closest('.plots-sliders__tab').addClass("disable");
@@ -117,9 +128,43 @@ $(function () {
 				}
 			});
 			
-			
 			//Проверяем скрыт ли нужный таб на данный момент. Если скрыт, то выключаем соседний
 		})
+		
+		//Стрелки на мобилке у сюжетов
+		
+		$('.mobile-arrows').on("click", function () {
+			//Определяем направление
+			let directionIsRight = $(this).hasClass('right')
+			//Список всех мелких фото внизу
+			const allMiniPhotos = $(this)
+				.closest('.plots-sliders__main')
+				.siblings('.plots-sliders__mini')
+				.find('.plotsm-slider__slide');
+			const curPhoto = $(this).siblings('.plots-slider__slide');
+			let curPhotoInd = +curPhoto.attr('data-arr-nav');
+			//Индекс в массиве всех фоток, по которому найдём фото, которое надо показать
+			let neededPhotoInd = curPhotoInd;
+			if (curPhotoInd === 0 && !directionIsRight) {
+				neededPhotoInd = allMiniPhotos.length - 1;
+			} else if (!directionIsRight) {
+				neededPhotoInd--;
+			} else {
+				neededPhotoInd++;
+			}
+			if (curPhotoInd === allMiniPhotos.length - 1 && directionIsRight) {
+				neededPhotoInd = 0
+			}
+			const neededPhoto = allMiniPhotos[neededPhotoInd];
+			let neededPhotoSrc = $(neededPhoto).find('img').attr('src')
+			curPhoto.find('img').fadeOut(300, function () {
+				$(this).attr('src', neededPhotoSrc).fadeIn(300);
+				$(neededPhoto).closest('.plots-sliders__slider-mini').find('.plotsm-slider__slide').removeClass('selected');
+				$(neededPhoto).addClass('selected')
+			});
+			curPhoto.attr('data-arr-nav', neededPhotoInd)
+		});
+		
 		
 		//</Сюжеты>
 		
@@ -205,12 +250,18 @@ $(function () {
 			}
 		});
 		
+		//Баг с фэнсибоксом
+		$('.collage:not(.modal-inline)').on('click', function () {
+			$('.collage.modal-inline').click();
+		});
+		
 		//<Попапы>
 		
 		$(".modal-inline").fancybox({
 			margin: 0,
-			padding: 20,
+			padding: 0,
 			maxWidth: 600,
+			loop: true,
 			autoScale: true,
 			transitionIn: 'none',
 			transitionOut: 'none',
@@ -220,7 +271,6 @@ $(function () {
 					locked: false
 				}
 			},
-			
 			// Arrows
 			btnTpl: {
 				arrowLeft:
@@ -238,6 +288,22 @@ $(function () {
 					"</button>"
 			},
 			
+			mobile: {
+				btnTpl: {
+					arrowLeft:
+						'<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left mobile" title="{{PREV}}"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+						'<circle opacity="0.5" cx="15" cy="15" r="15" transform="rotate(180 15 15)" fill="#FF7A49"/>\n' +
+						'<path d="M16.5 19.5L12 15L16.5 10.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+						'</svg></button>',
+					
+					arrowRight:
+						'<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right mobile" title="{{NEXT}}"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+						'<circle opacity="0.5" cx="15" cy="15" r="15" fill="#FF7A49"/>\n' +
+						'<path d="M13.5 10.5L18 15L13.5 19.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+						'</svg></button>',
+				},
+			}
+			
 			
 		});
 		
@@ -254,7 +320,22 @@ $(function () {
 					locked: false
 				}
 			},
+			btnTpl: {
+				arrowLeft:
+					'',
+				
+				arrowRight:
+					''
+			},
 			showNavArrows: false,
+			afterLoad: function(){
+				const kol_vo = $('.main-row .pp-orderl-info__row-label span.kol-vo');
+				if($(window).width() <= '596' && kol_vo.text() === 'Количество'){
+					kol_vo.text('Кол-во');
+				}else {
+					kol_vo.text('Количество');
+				}
+			},
 			
 		});
 		//</Попапы>
@@ -264,7 +345,6 @@ $(function () {
 		})
 		
 		$(".main-order__input-counter, .main-order__image-container img").on("click", function () {
-			console.log("hello")
 			$(this)
 				.closest(".main-order__item-column")
 				.find("button.modal-inline")

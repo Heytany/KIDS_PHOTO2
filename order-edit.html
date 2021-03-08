@@ -55,7 +55,7 @@
 					</ul>
 				</nav>
 			</div>
-			<div class="topmenu__photoorder">
+			<div class="topmenu__photoorder order-photob ">
 				<a href="./auth.html" class="topmenu__orderbutton primal-button">
                         <span class="topmenu__ordertext primal-button__text">
                             ЗАКАЗАТЬ ФОТО
@@ -91,50 +91,6 @@
 						</svg>
 					</div>
 				</div>
-			</div>
-		</div>
-	</header>
-		<div class="topmenu container">
-			<div class="topmenu__logo">
-				<a href="./index.html" class="topmenu__logolink">
-					<img src="img/header/Logo.png" alt="Img is missed" class="topmenu__icon">
-				</a>
-			</div>
-			<nav class="topmenu__menuitems">
-				<div class="topmenu__item">
-					<a href="./index.html" class="topmenu__menulink">
-						<span class="topmenu__text ">Главная</span>
-					</a>
-				</div>
-				<div class="topmenu__item">
-					<a href="./plots.html" class="topmenu__menulink">
-						<span class="topmenu__text ">Сюжеты</span>
-					</a>
-				</div>
-				<div class="topmenu__item">
-					<a href="./contacts.html" class="topmenu__menulink">
-						<span class="topmenu__text ">Контакты</span>
-					</a>
-				</div>
-			</nav>
-			<div class="header__body">
-				<div class="header__burger">
-					<span></span>
-				</div>
-				<nav style="display:none;" class="header__menu">
-					<ul class="header__list">
-						<li><a href="index.html" class="header__link">Главная</a></li>
-						<li><a href="plots.html" class="header__link">Сюжеты</a></li>
-						<li><a href="contacts.html" class="header__link">Контакты</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="topmenu__photoorder">
-				<a href="./auth.html" class="topmenu__orderbutton primal-button">
-					<span class="topmenu__ordertext primal-button__text">
-						 ЗАКАЗАТЬ ФОТО
-					</span>
-				</a>
 			</div>
 		</div>
 	</header>
@@ -290,12 +246,12 @@
 
 								<div class="main-order__photo-couple">
 									<div class="main-order__input-counter">
-										<input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-											   class="main-order__input">
+										<input  readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+												class="main-order__input">
 									</div>
 									<div class="main-order__input-counter">
-										<input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
-											   class="main-order__input">
+										<input  readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text" name="size"
+												class="main-order__input">
 									</div>
 								</div>
 
@@ -510,13 +466,22 @@
 						<div class="main-order-options__background">
 							<div class="main-order-options__background2">
 								<div class="main-order-options__image">
-									<img src="./img/order-detail/b2.png" alt="">
+									<div class="main-order-options__image-so-bad">
+										<img src="./img/order-detail/b2.png" alt="">
+									</div>
+									<div class="main-order-options__prow prow-label0">
+										<span class="main-order-options__prow-label">Предоставлен образец. В зависимости от размера выбранного коллажа расположение и размер элементов могут незначительно отличатся.</span>
+									</div>
 								</div>
+
 								<div class="main-order-options__params">
 									<div class="main-order-options__prow">
 										<p class="main-order-options__pname"><span>КОЛЛАЖ ФОТО</span></p>
 										<p class="main-order-options__psize"><span>30x20</span></p>
-
+										<button type="button"
+												class="main-order-options__pick-size2 secondary-button collage">
+											<span class="secondary-button__text">ОБРАЗЕЦ</span>
+										</button>
 										<div>
 											<input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text"
 												   name="size" class="main-order-options__input">
@@ -526,7 +491,10 @@
 									<div class="main-order-options__prow">
 										<p class="main-order-options__pname"><span>КОЛЛАЖ ФОТО</span></p>
 										<p class="main-order-options__psize"><span>45x30</span></p>
-
+										<button type="button"
+												class="main-order-options__pick-size2 secondary-button collage">
+											<span class="secondary-button__text">ОБРАЗЕЦ</span>
+										</button>
 										<div>
 											<input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text"
 												   name="size" class="main-order-options__input">
@@ -536,7 +504,10 @@
 									<div class="main-order-options__prow">
 										<p class="main-order-options__pname"><span>КОЛЛАЖ МАГНИТ</span></p>
 										<p class="main-order-options__psize"><span>18x9</span></p>
-
+										<button type="button"
+												class="main-order-options__pick-size2 secondary-button collage">
+											<span class="secondary-button__text">ОБРАЗЕЦ</span>
+										</button>
 										<div>
 											<input readonly="" min="1" max="9" pattern="^[ 0-9]+$" type="text"
 												   name="size" class="main-order-options__input">
@@ -548,7 +519,7 @@
 									</div>
 									<div class="main-order-options__button-container">
 										<button type="button" data-src="#00" data-fancybox="group" data-modal="false"
-												class="main-order-options__pick-size secondary-button modal-inline">
+												class="main-order-options__pick-size secondary-button modal-inline collage">
 											<span class="secondary-button__text">Выбрать размер</span>
 										</button>
 									</div>
@@ -637,7 +608,7 @@
 									<span>0/200</span>
 								</div>
 								<div class="main-order-accept__spoiler-footer">
-									<button type="submit" class="secondary-button">
+									<button type="button" class="secondary-button">
 										<span class="secondary-button__text">Готово</span>
 									</button>
 									<div class="main-order-accept__spoiler-footer-meta">
@@ -1989,7 +1960,7 @@
 						</div>
 
 						<div class="pp-orderl-info__row-label">
-							<span>Количество</span>
+							<span class="kol-vo">Количество</span>
 						</div>
 
 						<div class="pp-orderl-info__row-label">
