@@ -690,6 +690,13 @@ body {
 .plots-container__row:last-child {
   margin-bottom: 0px;
 }
+.plots-container .couple-hadler {
+  display: flex;
+  margin-right: 20px;
+}
+.plots-container .last-in-couple {
+  margin-right: 0;
+}
 .plots-container .small-photo {
   flex: 23% 0 1;
   min-width: 277.5px;
@@ -2049,20 +2056,27 @@ body {
 /* Состояния для попапов Конец*/
 /* Адаптив*/
 @media (max-width: 1200px) {
-  .plots-container .big-photo {
-    min-width: 342px;
+  .couple-hadler,
+.plots-container .big-photo {
+    min-width: auto;
+    flex-basis: 48.5%;
   }
 
   .plots-container .small-photo {
-    min-width: 230px;
+    min-width: auto;
+    flex-basis: 49%;
+  }
+
+  .plots-container .couple-hadler {
+    margin-right: 16px;
   }
 
   .plots-container__photo {
-    margin-right: 18px;
+    margin-right: 16px;
   }
 
   .plots-container__row {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .plots-container__row:last-child {
@@ -2071,47 +2085,80 @@ body {
 }
 @media (max-width: 1030px) {
   .plots-container__row {
-    margin-bottom: 0px;
     flex-wrap: wrap;
-    max-width: 520px;
+    max-width: 567px;
     margin: 0 auto;
+    margin-bottom: 24px;
   }
 
-  .plots-container__row .plots-container__photo.small-photo:last-child {
-    margin-right: 0px;
-  }
-
-  .plots-container .big-photo {
-    min-width: 500px;
-    margin-bottom: 18px;
+  .couple-hadler,
+.plots-container .big-photo {
+    min-width: auto;
+    flex-basis: 100%;
+    margin-right: 0;
   }
 
   .plots-container .small-photo {
-    min-width: 241px;
-    margin-bottom: 18px;
+    min-width: auto;
+    flex-basis: 49%;
   }
-}
-@media (max-width: 548px) {
+
+  .plots-container .couple-hadler {
+    margin-bottom: 24px;
+    margin-right: 0;
+  }
+
+  .plots-container__photo {
+    margin-right: 24px;
+  }
+
   .plots-container__row {
+    margin-bottom: 24px;
+  }
+
+  .plots-container__row:last-child {
     margin-bottom: 0px;
-    flex-wrap: wrap;
-    max-width: 250px;
-    margin: 0 auto;
   }
 
-  .plots-container__row .plots-container__photo.small-photo:last-child {
-    margin-right: 0px;
+  .last-in-couple {
+    margin-top: 24px;
   }
 
-  .plots-container .big-photo {
-    min-width: 241px;
+  /* .plots-container .big-photo {
+     min-width: 500px;
+     margin-bottom: 24px;
+     margin-right: 0px;
+   }
+   .plots-container .small-photo {
+     min-width: 241px;
+     margin-bottom: 24px;
+
+
+   }
+    .last-in-row{
+     margin-right: 0;
+   }*/
+}
+@media (max-width: 599px) {
+  .plots-container__row {
     margin-bottom: 10px;
   }
 
-  /*  .plots-container .small-photo {
-      min-width: 241px;
-      margin-bottom: 10px;
-    }*/
+  .plots-container .couple-hadler {
+    margin-bottom: 10px;
+  }
+
+  .plots-container__photo {
+    margin-right: 10px;
+  }
+
+  .plots-container__row {
+    margin-bottom: 10px;
+  }
+
+  .last-in-couple {
+    margin-top: 10px;
+  }
 }
 @media (max-width: 1160px) {
   .plots-sliders__slider-mini, .plots-sliders__slide-label {
