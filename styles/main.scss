@@ -754,8 +754,10 @@ body {
 /* Сюжеты */
 .plots-container {
   margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
 
-  &__row {
+/*  &__row {
     display: flex;
     margin-bottom: 20px;
   }
@@ -772,11 +774,12 @@ body {
 
   .last-in-couple{
     margin-right: 0;
-  }
+  }*/
 
   .small-photo {
     flex: 23% 0 1;
     min-width: 277.5px;
+
   }
 
   .big-photo {
@@ -787,12 +790,13 @@ body {
   &__photo {
     position: relative;
     margin-right: 20px;
+    margin-bottom: 20px;
   }
 
-  &__photo:last-child {
+  &__photo:last-child,
+  .last-in-row3{
     margin-right: 0px;
   }
-
 
   &__photo img {
     border-radius: 5px;
@@ -802,6 +806,7 @@ body {
   &__photo a {
     display: inline-block;
     height: 100%;
+    width: 100%;
   }
 
   &__label {
@@ -2473,8 +2478,8 @@ body {
 /* Состояния для попапов Конец*/
 
 /* Адаптив*/
-@media (max-width: 1200px) {
-  .couple-hadler,
+/*@media (max-width: 1200px) {
+  !*.couple-hadler,*!
   .plots-container .big-photo {
     min-width: auto;
     flex-basis: 48.5%;
@@ -2483,94 +2488,117 @@ body {
     min-width: auto;
     flex-basis: 49%;
   }
-  .plots-container .couple-hadler{
+!*  .plots-container .couple-hadler{
     margin-right: 16px;
-  }
+  }*!
   .plots-container__photo {
     margin-right: 16px;
   }
-  .plots-container__row {
+!*  .plots-container__row {
     margin-bottom: 16px;
   }
   .plots-container__row:last-child {
     margin-bottom: 0px;
-  }
-}
+  }*!
+}*/
 
 ///Сюжеты
-@media (max-width: 1030px) {
-  .plots-container__row {
-    flex-wrap: wrap;
-    max-width: 567px;
-    margin: 0 auto;
-    margin-bottom: 24px;
+@media (max-width: 1210px) {
+
+  .plots-container{
+    justify-content: center;
   }
 
-  .couple-hadler,
+  .plots-container .small-photo {
+  flex: 23% 0 1;
+  min-width: 231px;
+}
+
   .plots-container .big-photo {
-    min-width: auto;
-    flex-basis: 100%;
-    margin-right: 0;
+  flex: 48% 0 1;
+  min-width: 342px;
+}
+
+  .plots-container .plots-container__photo {
+  position: relative;
+  margin-bottom: 17px;
+}}
+
+@media (max-width: 1030px) {
+
+  .plots-container{
+    max-width: 768px;
+    margin: 0 auto;
   }
-  .plots-container .small-photo {
-    min-width: auto;
-    flex-basis: 49%;
-  }
-  .plots-container .couple-hadler{
-    margin-bottom: 24px;
-    margin-right: 0;
-  }
-  .plots-container__photo {
+
+  .plots-container .plots-container__photo {
     margin-right: 24px;
-  }
-  .plots-container__row {
     margin-bottom: 24px;
   }
-  .plots-container__row:last-child {
-    margin-bottom: 0px;
-  }
-
-  .last-in-couple{
-    margin-top:24px;
-  }
-
-
- /* .plots-container .big-photo {
-    min-width: 500px;
-    margin-bottom: 24px;
-    margin-right: 0px;
+  .plots-container .big-photo {
+    flex-basis: 96%;
+    min-width: 513px;
+    margin-right: 0;
   }
   .plots-container .small-photo {
-    min-width: 241px;
-    margin-bottom: 24px;
-
-
+    flex-basis: 46%;
+    min-width: 348px;
   }
-   .last-in-row{
+
+  .plots-container__photo img{
+    min-width: 348px;
+  }
+
+  .plots-container .last-in-row{
     margin-right: 0;
-  }*/
+  }
 
+}
 
+@media (max-width: 768px) {
+
+  .plots-container .big-photo {
+    flex-basis: 98%;
+    min-width: 233px;
+  }
+
+  .plots-container .small-photo {
+    flex-basis: 47.5%;
+    min-width: 155px;
+  }
+
+  .plots-container__photo img{
+    min-width: auto;
+  }
 
 }
 
 @media (max-width: 599px){
-  .plots-container__row {
-    margin-bottom: 10px;
-  }
-  .plots-container .couple-hadler{
-    margin-bottom: 10px;
-  }
-  .plots-container__photo {
-    margin-right: 10px;
-  }
-  .plots-container__row {
-    margin-bottom: 10px;
-  }
 
-  .last-in-couple{
-    margin-top:10px;
-  }
+
+    .plots-container .plots-container__photo {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .plots-container .big-photo {
+     flex-basis: 97%;
+      /*  min-width: 513px;*/
+      margin-right: 0;
+    }
+    .plots-container .small-photo {
+/*      flex-basis: 46%;
+      min-width: 348px;*/
+    }
+
+    .plots-container__photo img{
+/*      min-width: 348px;*/
+    }
+
+    .plots-container .last-in-row{
+      margin-right: 0;
+    }
+
+
 }
 
 ///Сюжеты внутри
@@ -3818,8 +3846,8 @@ body {
   /////
 
   .order-info__change-order a svg{
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 15px;
   }
 
   .order-info__cancel-order a svg{
@@ -3828,15 +3856,22 @@ body {
   }
 
   .order-info__change-label span {
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 14px;
+    line-height: 16px;
   }
 
   .order-info__cancel-label span {
-    font-size: 10px;
-    line-height: 14px;}
+    font-size: 14px;
+    line-height: 16px;}
 
+  .order-info__change-options {
+    justify-content: space-between;}
 
+  .order-info__change-options div:first-child {
+     margin-right: 0;
+  }
+  .order-info__cancel-order {
+  margin-right: 28px;}
 
   ////шрифты страницы
 
@@ -4200,4 +4235,10 @@ body {
     width: 100%;
   }
 
+}
+
+//текст попапов
+
+.main-order-options__prow.prow-label2{
+  margin-top: 15px;
 }
