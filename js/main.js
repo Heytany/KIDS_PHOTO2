@@ -358,6 +358,16 @@ $(function () {
 					.find(".main-order-options__button-container button")
 					.click();
 			});
+		
+		$('.mobile-popup_1, .mobile-popup_2, .mobile-popup_3, .mobile-popup_4')
+			.on('click', function () {
+				let popupNum = this.classList.toString().match(/mobile-popup_(\d)/)[1];
+				$('button.desctop-popup_'+popupNum).click();
+			})
+	
+		$('.after640').on('click', function () {
+			$('.before640.'+this.getAttribute('data-small-popup')).click();
+		})
 		//</Заказать фото>
 		
 		

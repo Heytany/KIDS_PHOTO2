@@ -1402,6 +1402,7 @@ body {
     font-size: 20px;
     line-height: 23px;
     color: #30454F;
+    cursor: pointer;
   }
 
   &__pname {
@@ -3559,6 +3560,71 @@ body {
     max-width: 603px;
   }
 
+  /// Удаляем ховера
+
+  .primal-button:hover, .auth-button:hover {
+    background-color: #FF7A49;
+  }
+
+  .secondary-button:hover {
+    background: #FFFFFF;
+  }
+
+  .secondary-button:hover svg,
+  .secondary-button:active svg, {
+    path {
+      stroke: #FF7A49;
+    }
+  }
+
+  .secondary-button:hover .secondary-button__text,
+  .secondary-button:active .secondary-button__text {
+    color: #FF7A49;;
+  }
+
+  .primal-button:active{
+    background-color: #FF7A49;
+    transform: none;
+  }
+  .secondary-button:active {
+    background-color: #ffffff;
+    transform: none;
+  }
+
+  .auth-button:active {
+    background-color: #FF7A49;
+  }
+
+  .another-button:hover a {
+    border: 1px solid #0091FF;
+    opacity: 1;
+  }
+
+  .small-photo a:hover img, .big-photo a:hover img,
+  {
+    box-shadow: none;
+  }
+
+  .another-button:hover a span {
+    color: #0091FF;
+  }
+
+  .another-button:active {
+    transform: none;
+  }
+
+  .primal-text:hover {
+    border: none;
+    box-shadow: none;
+  }
+
+  .primal-text:focus {
+    border: none;
+    box-shadow: none;
+  }
+
+
+
 }
 
 // new section2
@@ -3632,6 +3698,10 @@ body {
   .main-order2__img-row{
     display: flex;
     justify-content: space-between;
+
+    position: sticky;
+    top: 10px;
+    z-index: 100;
   }
 
   .main-order2__input-row{
