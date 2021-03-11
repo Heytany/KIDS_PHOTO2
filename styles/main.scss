@@ -106,9 +106,7 @@ textarea {
 
 /*Состояния кнопок*/
 
-.fancybox-button svg path {
-   fill: none;
-   stroke-width: 2;}
+
 
 
 .primal-button,
@@ -835,6 +833,11 @@ body {
 /* Сюжеты_Конец*/
 
 /* Сюжеты_Фото */
+.ratio-content,.ratio-content-mini{
+  width: 100%;
+  height: 100%;
+}
+
 .mainnav-container {
   display: flex;
   align-items: center;
@@ -2557,6 +2560,13 @@ body {
 
 @media (max-width: 768px) {
 
+
+  .fancybox-button svg path {
+    fill: none;
+    stroke-width: 2;}
+
+
+
   .plots-container .big-photo {
     flex-basis: 98%;
     min-width: 233px;
@@ -2608,9 +2618,14 @@ body {
     margin-left: auto;
   }
 
-  .plots-slider__slide, .plots-slider__image {
+  .plots-slider__slide {
     height: 611px;
     width: 611px;
+  }
+
+  .plots-slider__image{
+    width: 100%;
+    height: 100%;
   }
 
   .plotsm-slider__slide.swiper-slide {
@@ -2650,7 +2665,7 @@ body {
   //end
 
 
-  .plots-slider__slide, .plots-slider__image {
+  .plots-slider__slide {
     height: 483px;
     width: 483px;
   }
@@ -2673,14 +2688,11 @@ body {
   display: none;
 }
 
-@media (min-width: 780px) {
+@media (max-width: 780px) {
+
   .plotsm-slider__slide.swiper-slide:hover {
     border: 1px solid #0091FF;
   }
-}
-
-@media (max-width: 780px) {
-
 
   .plots-tabs {
     top: 0px;
@@ -2724,12 +2736,12 @@ body {
     width: auto;
     height: auto;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
   }
 
-  .plots-sliders__slider-mini .plotsm-slider__slide:not(:last-child) {
+/*  .plots-sliders__slider-mini .plotsm-slider__slide:not(:last-child) {
     margin-right: 15px;
-  }
+  }*/
 
   .plots-sliders__slide-container {
     flex: 100% 0 1;
@@ -2758,12 +2770,56 @@ body {
   }
 
 
+  .ratio {
+    width: 100%; /* здесь можно установить любую нужную ширину */
+    height: auto;
+  }
+
+  .ratio-inner {
+    width: auto;
+    height: auto;
+    position: relative;
+    height: 0;
+    border: none;
+    padding-top: 100%;
+  }
+
+  .ratio-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .plotsm-slider__slide.swiper-slide.ratio-mini {
+    width: 24%;
+    height: auto;
+  }
+
+  .ratio-inner-mini {
+/*    width: auto !important;
+    height: auto !important;*/
+    position: relative;
+    height: 0;
+    border: none;
+    padding-top: 100%;
+  }
+
+  .ratio-content-mini {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
 }
 
-@media (max-width: 520px) {
+/*@media (max-width: 520px) {
 
 
-  .plots-slider__slide, .plots-slider__image {
+  .plots-slider__slide {
     height: 340px;
     width: 340px;
   }
@@ -2787,7 +2843,7 @@ body {
     left: 25px;
   }
 
-}
+}*/
 
 ///Сюжеты конец
 /// Хеадер и футер
@@ -4241,4 +4297,5 @@ body {
 
 .main-order-options__prow.prow-label2{
   margin-top: 15px;
+  margin-bottom: 15px;
 }
