@@ -183,8 +183,22 @@ body {
 
 }
 
-.slider__item{
+section.main-slider_mobile{
+    display: none;
+}
 
+.main-slider_mobile .slider__item{
+
+}
+
+.main-slider_mobile .slider__item img{
+    width: 100%;
+}
+
+@media (max-width: 360px) {
+    section.main-slider_mobile{
+        display: block;
+    }
 }
 
 /* Слайдер */

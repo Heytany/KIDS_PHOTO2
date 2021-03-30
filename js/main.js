@@ -43,6 +43,54 @@ $(function () {
 			e.preventDefault();
 		});
 		
+		
+		function iOS() {
+			return [
+					'iPad Simulator',
+					'iPhone Simulator',
+					'iPod Simulator',
+					'iPad',
+					'iPhone',
+					'iPod'
+				].includes(navigator.platform)
+				// iPad on iOS 13 detection
+				|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+		}
+		
+		//Запрет на увеличение сайта кропом пальцев или двойным тапом
+		if (iOS() === true) {
+			let lastTouchEnd = 0;
+			document.addEventListener('touchend', function (event) {
+				let now = (new Date()).getTime();
+				if (now - lastTouchEnd <= 300) {
+					event.preventDefault();
+				}
+				lastTouchEnd = now;
+			}, false);
+			
+			document.addEventListener('touchmove', function (event) {
+				if (event.touches.length === 2) {
+					event.preventDefault();
+				}
+				
+			}, {passive: false});
+		}
+		
+		
+		//Добавляем бургер, но только для верстки
+		function IsVerska() {
+			let curLink = window.location.href.split('/')
+			let curPage = curLink[curLink.length - 1].split('.')
+			return 'html' === curPage[curPage.length - 1] || curLink.includes('dist');
+		}
+		
+		if (IsVerska()) {
+			$('.header__body').on("click", function (e) {
+				$('.header__burger, .header__menu').toggleClass('active');
+				$('.header__menu').slideToggle(300);
+			})
+		}
+		
 		//<Решение проблемы со скачущими хэдерами и футерами>
 		
 		// alert(pageHasScroll())
@@ -79,7 +127,7 @@ $(function () {
 				.closest(".plots-slider__slide")
 				.attr(
 					'data-arr-nav', $(this).closest('.plotsm-slider__slide')
-						.index('.plotsm-slider__slide')
+						.index('.plotsm-slider__slide:visible')
 				);
 			if (CurBigImg.getAttribute("src") !== clickedImgSrc) {
 				$(CurBigImg).fadeOut(300, () => {
@@ -166,6 +214,56 @@ $(function () {
 		});
 		
 		
+		//Пробуем сделать перелистывания по свайпу пальцами
+		let clientX_prev;
+		let clientX;
+		$('.plots-sliders')
+			.on('touchstart', function (e) {
+				clientX_prev = e.originalEvent.changedTouches[0].clientX;
+			})
+			.on('touchend', function (e) {
+				clientX = e.originalEvent.changedTouches[0].clientX;
+				
+				if (clientX_prev - clientX > 10) {
+					// console.log("Влево")
+					$(this).find('.mobile-arrows.left').click();
+				} else if (clientX - clientX_prev > 10) {
+					// console.log("Вправо")
+					$(this).find('.mobile-arrows.right').click();
+					
+				}
+			})
+		
+		
+		// let clientX_prev = 0;
+		// let clientX = 0;
+		// let swipe_event_prev;
+		// let swipe;
+		
+		
+		/*$('.plots-sliders').on('touchstart touchmove touchend', function (e) {
+			// console.log(e);
+			let do_swipe = false;
+			swipe_event_prev = swipe;
+			swipe = e.handleObj.origType;
+			if (swipe_event_prev === 'touchmove') {
+				do_swipe = true;
+			}
+			clientX_prev = clientX;
+			clientX = e.originalEvent.changedTouches[0].clientX;
+			
+			console.log(clientX)
+			console.log(clientX_prev)
+			console.log(swipe_event_prev)
+			if (clientX_prev - clientX > 10 && do_swipe) {
+				console.log("Влево")
+			} else if (clientX - clientX_prev > 10 && do_swipe) {
+				console.log("Вправо")
+			}
+			
+			
+		});*/
+		
 		//</Сюжеты>
 		
 		//<Заказать фото>
@@ -207,7 +305,7 @@ $(function () {
 		})
 		
 		
-		$.each($('.checkbox1'), function (index, val) {
+		$.each($('.checkbox1:not(.edit-checkbox)'), function (index, val) {
 			if ($(this).find('input').prop('checked') === true) {
 				$(this).addClass('activebox');
 			}
@@ -223,7 +321,6 @@ $(function () {
 				$(this).find('input').prop('checked', true);
 			}
 			$(this).toggleClass('activebox');
-			return false;
 		});
 		
 		$('.main-order-accept__link').click(function () {
@@ -239,10 +336,17 @@ $(function () {
 			}
 		});
 		
-		$(".main-order-accept__spoiler-footer button").on("click", function () {
-			$('.main-order-accept__link').click();
+		
+		$(".main-order-accept__spoiler-footer button, .main-order-accept__link").on("click", function () {
+			let checkbox
+			if (!$(this).hasClass('main-order-accept__link')) {
+				$('.main-order-accept__link').click();
+				checkbox = $(this).closest('.main-order-accept__spoiler').siblings('.main-order-accept__check-box').find(".checkbox1");
+			} else {
+				checkbox = $(this).siblings('.main-order-accept__check-box').find(".checkbox1");
+			}
+			
 			const commentInput = document.querySelector('.main-order-accept__spoiler-input textarea');
-			const checkbox = $(this).closest('.main-order-accept__spoiler').siblings('.main-order-accept__check-box').find(".checkbox1");
 			if (commentInput.value.length) {
 				$(checkbox).addClass('activebox');
 			} else {
@@ -315,6 +419,7 @@ $(function () {
 			transitionIn: 'none',
 			transitionOut: 'none',
 			type: 'inline',
+			touch: false,
 			helpers: {
 				overlay: {
 					locked: false
@@ -328,11 +433,11 @@ $(function () {
 					''
 			},
 			showNavArrows: false,
-			afterLoad: function(){
+			afterLoad: function () {
 				const kol_vo = $('.main-row .pp-orderl-info__row-label span.kol-vo');
-				if($(window).width() <= '596' && kol_vo.text() === 'Количество'){
+				if ($(window).width() <= '596' && kol_vo.text() === 'Количество') {
 					kol_vo.text('Кол-во');
-				}else {
+				} else {
 					kol_vo.text('Количество');
 				}
 			},
@@ -340,11 +445,12 @@ $(function () {
 		});
 		//</Попапы>
 		
-		$(".pp-label-info__button ").on("click", function () {
+		
+		$(".pp-label-info__button, .pp-change-size__changer-result .primal-button").on("click", function () {
 			$(".fancybox-close-small").click();
 		})
 		
-		$(".main-order__input-counter, .main-order__image-container img").on("click", function () {
+		$(".main-order__input-counter:not(.block-lock), .main-order__image-container img").on("click", function () {
 			$(this)
 				.closest(".main-order__item-column")
 				.find("button.modal-inline")
@@ -362,11 +468,11 @@ $(function () {
 		$('.mobile-popup_1, .mobile-popup_2, .mobile-popup_3, .mobile-popup_4')
 			.on('click', function () {
 				let popupNum = this.classList.toString().match(/mobile-popup_(\d)/)[1];
-				$('button.desctop-popup_'+popupNum).click();
+				$('button.desctop-popup_' + popupNum).click();
 			})
-	
+		
 		$('.after640').on('click', function () {
-			$('.before640.'+this.getAttribute('data-small-popup')).click();
+			$('.before640.' + this.getAttribute('data-small-popup')).click();
 		})
 		//</Заказать фото>
 		
