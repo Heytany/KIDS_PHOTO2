@@ -3345,15 +3345,18 @@ section.main-slider_mobile .slider__item img {
     transform: none;
   }
 
-  .primal-text:hover {
-    border: none;
-    box-shadow: none;
-  }
-
-  .primal-text:focus {
-    border: none;
-    box-shadow: none;
-  }
+  /*	.primal-text:hover{
+  		border: none;
+  		box-shadow: none;
+  	}
+  	.pp-orderl-info__input-container div input:hover{
+  		border: 1px solid #a4b8c1;
+  		box-shadow: 0 0 2px 2px #5ca2ff;
+  	}*/
+  /*	.primal-text:focus{
+  		border: none;
+  		box-shadow: none;
+  		}*/
 }
 .main-order-section2 {
   display: none;
