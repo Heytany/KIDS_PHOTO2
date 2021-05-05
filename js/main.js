@@ -395,16 +395,27 @@ $(function () {
 			mobile: {
 				btnTpl: {
 					arrowLeft:
-						'<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left mobile" title="{{PREV}}"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+/*						'<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left mobile" title="{{PREV}}"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
 						'<circle opacity="0.5" cx="15" cy="15" r="15" transform="rotate(180 15 15)" fill="#FF7A49"/>\n' +
 						'<path d="M16.5 19.5L12 15L16.5 10.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\n' +
-						'</svg></button>',
-					
-					arrowRight:
-						'<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right mobile" title="{{NEXT}}"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+						'</svg></button>',*/
+
+						'<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left mobile" title="{{PREV}}"><svg class="mobile-arrow" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+						'<path d="M18 22.5L10.5 15L18 7.5" stroke="#FF7A49" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+						'<rect x="1" y="1" width="28" height="28" rx="14" transform="matrix(4.37114e-08 1 1 -4.37114e-08 4.37114e-08 -4.37114e-08)" stroke="#FF7A49" stroke-width="2"/>\n' +
+					'</svg></button>',
+
+
+	arrowRight:
+/*						'<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right mobile" title="{{NEXT}}"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
 						'<circle opacity="0.5" cx="15" cy="15" r="15" fill="#FF7A49"/>\n' +
 						'<path d="M13.5 10.5L18 15L13.5 19.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\n' +
-						'</svg></button>',
+						'</svg></button>',*/
+					'<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right mobile" title="{{NEXT}}"><svg class="mobile-arrow" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+					'<path d="M12 22.5L19.5 15L12 7.5" stroke="#FF7A49" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+					'<rect x="29" y="1" width="28" height="28" rx="14" transform="rotate(90 29 1)" stroke="#FF7A49" stroke-width="2"/>\n' +
+					'</svg></button>',
+
 				},
 			}
 			
