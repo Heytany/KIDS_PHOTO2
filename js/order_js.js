@@ -255,13 +255,14 @@ $(function(){
         );
 
         $('.all-price').text(price_serv);
+        $(".promo-code [name=code-sub]").attr("data-default-price", price_serv)
         if (price_serv>0) {
             $('.price-show').show();
             do_order();
         } else {
             $('.price-show').hide();
         }
-    };
+    }
 
     $('body').on('click', '.button-save',function () {
 
@@ -315,20 +316,22 @@ $(function(){
         var code=$('.files-str').data('code');
         var city=$('.files-str').data('city');
         var price=$('.all-price:first').text();
+        var promo_code=$('input[name=used-promocode-id]').val();
         var fio=$('.fio-child').val();
         var group=$('.group-child').val();
         var email=$('.email-order').val();
         var email_repeat=$('.email-repeat').val();
         var order; // переменная для сбора заказа
         var retush=$('.textarea-retush').val();
-
+    
+        
         var orderarr=[];
         $('.order-serv-str').each(function(index){
             orderarr[index]=$(this).data('order');
         });
         order=orderarr.toString();
         //еще потом надо будет подсасывать промокод id и скидку
-
+        data.promo_code = promo_code ? promo_code : false;
         data.session=session;
         data.id=id;
         data.city=city;
@@ -341,7 +344,8 @@ $(function(){
         if ($('.checkbox-comment').hasClass("activebox")){
             data.retush=retush;
         }
-
+    
+    
         var filter=true;
         var error_list="";
 
@@ -374,7 +378,7 @@ $(function(){
 
         //console.log(filter);
         //console.log(error_list);
-        //console.log(data);
+        console.log(data);
         if (filter) {
             //тут будет ajax
             $(this).hide();

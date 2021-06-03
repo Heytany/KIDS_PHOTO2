@@ -4894,3 +4894,12 @@ table.table-order{
 	color: #FF7A49;
 	display: inline-block;
 }
+.prow-arrows{
+	display: none;
+}
+
+@media (max-width: 640px){
+.prow-arrows{
+	display: flex;
+	justify-content: space-between;
+}}
